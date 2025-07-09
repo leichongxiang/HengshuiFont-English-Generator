@@ -1,0 +1,121 @@
+{
+  "name": "hengshui-english-generator",
+  "version": "1.0.0",
+  "description": "🌟 Professional Hengshui-style English vocabulary practice template generator for Chinese students. Features comprehensive vocabulary database, customizable writing grids, and scientific learning methods. | 专业的衡水体英语单词练字模板生成器，为中国学生设计。",
+  "keywords": [
+    "hengshui",
+    "english",
+    "vocabulary",
+    "education",
+    "chinese-students",
+    "handwriting",
+    "practice",
+    "template",
+    "pdf",
+    "learning",
+    "writing-grids",
+    "educational-tools",
+    "nextjs",
+    "typescript",
+    "open-source"
+  ],
+  "homepage": "https://github.com/yourusername/HengshuiFont-English-Generator#readme",
+  "bugs": {
+    "url": "https://github.com/yourusername/HengshuiFont-English-Generator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/HengshuiFont-English-Generator.git"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "English Vocabulary Generator Contributors",
+    "url": "https://github.com/yourusername/english-vocabulary-generator/graphs/contributors"
+  },
+  "main": "src/app/page.tsx",
+  "private": false,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "analyze": "cross-env ANALYZE=true next build",
+    "export": "next export",
+    "prepare": "husky install",
+    "publish:github": "bash scripts/publish-to-github.sh",
+    "publish:github:windows": "scripts\\publish-to-github.bat",
+    "pre-publish": "npm run lint && npm run type-check && npm run test && npm run build",
+    "deploy:github": "npm run build && npm run export && gh-pages -d out",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod --dir=out",
+    "release": "npm run pre-publish && npm version patch && git push && git push --tags"
+  },
+  "dependencies": {
+    "jspdf": "^3.0.1",
+    "lucide-react": "^0.525.0",
+    "next": "15.3.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.60.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.5",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run type-check"
+    }
+  }
+}
