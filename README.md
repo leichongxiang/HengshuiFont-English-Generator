@@ -8,14 +8,11 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.0+-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green?style=flat-square)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/yourusername/HengshuiFont-English-Generator?style=flat-square)](https://github.com/yourusername/HengshuiFont-English-Generator/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/yourusername/HengshuiFont-English-Generator?style=flat-square)](https://github.com/yourusername/HengshuiFont-English-Generator/network/members)
-[![GitHub Issues](https://img.shields.io/github/issues/yourusername/HengshuiFont-English-Generator?style=flat-square)](https://github.com/yourusername/HengshuiFont-English-Generator/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/yourusername/HengshuiFont-English-Generator?style=flat-square)](https://github.com/yourusername/HengshuiFont-English-Generator/pulls)
-[![CI/CD](https://img.shields.io/github/actions/workflow/status/yourusername/HengshuiFont-English-Generator/ci.yml?branch=main&style=flat-square&label=CI%2FCD)](https://github.com/yourusername/HengshuiFont-English-Generator/actions)
-[![Codecov](https://img.shields.io/codecov/c/github/yourusername/HengshuiFont-English-Generator?style=flat-square)](https://codecov.io/gh/yourusername/HengshuiFont-English-Generator)
-[![Quality Gate Status](https://img.shields.io/sonar/quality_gate/yourusername_HengshuiFont-English-Generator?server=https%3A%2F%2Fsonarcloud.io&style=flat-square)](https://sonarcloud.io/summary/new_code?id=yourusername_HengshuiFont-English-Generator)
-[![Security Rating](https://img.shields.io/sonar/security_rating/yourusername_HengshuiFont-English-Generator?server=https%3A%2F%2Fsonarcloud.io&style=flat-square)](https://sonarcloud.io/summary/new_code?id=yourusername_HengshuiFont-English-Generator)
+[![GitHub Stars](https://img.shields.io/github/stars/leichongxiang/HengshuiFont-English-Generator?style=flat-square)](https://github.com/leichongxiang/HengshuiFont-English-Generator/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/leichongxiang/HengshuiFont-English-Generator?style=flat-square)](https://github.com/leichongxiang/HengshuiFont-English-Generator/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/leichongxiang/HengshuiFont-English-Generator?style=flat-square)](https://github.com/leichongxiang/HengshuiFont-English-Generator/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/leichongxiang/HengshuiFont-English-Generator?style=flat-square)](https://github.com/leichongxiang/HengshuiFont-English-Generator/pulls)
+[![CI/CD](https://img.shields.io/github/actions/workflow/status/leichongxiang/HengshuiFont-English-Generator/deploy.yml?branch=main&style=flat-square&label=CI%2FCD)](https://github.com/leichongxiang/HengshuiFont-English-Generator/actions)
 
 **A professional English vocabulary practice template generator designed for Chinese students, featuring Hengshui-style writing grids and comprehensive vocabulary database.**
 
@@ -113,21 +110,25 @@ npm run dev
 
 ---
 
-## 📸 Screenshots | 功能截图
+## 🎯 Key Features Demo | 核心功能演示
 
 <div align="center">
 
-### Main Interface | 主界面
-![Main Interface](docs/images/main-interface.png)
+### 📚 Vocabulary Database | 词汇数据库
+**500+ words** covering Primary 1-6 and Junior High 7-9 with phonetics and translations
+**500+单词** 覆盖小学1-6年级和初中7-9年级，包含音标和翻译
 
-### Grade Templates | 年级模板
-![Grade Templates](docs/images/grade-templates.png)
+### 📝 Hengshui Writing Grids | 衡水体书写格子
+Professional **4-line writing system** with customizable settings (10-20mm height)
+专业**四线三格系统**，可自定义设置（10-20mm行高）
 
-### Hengshui Grid Settings | 衡水体格子设置
-![Grid Settings](docs/images/grid-settings.png)
+### 🎓 Grade-Based Templates | 年级模板
+Pre-built templates for each educational level with curriculum alignment
+每个教育级别的预构建模板，与课程对齐
 
-### PDF Export | PDF导出
-![PDF Export](docs/images/pdf-export.png)
+### 📄 High-Quality PDF Export | 高质量PDF导出
+Professional printable templates with student information fields
+专业可打印模板，包含学生信息栏
 
 </div>
 
@@ -137,11 +138,11 @@ npm run dev
 
 <div align="center">
 
-![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/english-vocabulary-generator?style=flat-square)
-![GitHub code size](https://img.shields.io/github/languages/code-size/yourusername/english-vocabulary-generator?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/english-vocabulary-generator?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/english-vocabulary-generator?style=flat-square)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/yourusername/english-vocabulary-generator?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/leichongxiang/HengshuiFont-English-Generator?style=flat-square)
+![GitHub code size](https://img.shields.io/github/languages/code-size/leichongxiang/HengshuiFont-English-Generator?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/leichongxiang/HengshuiFont-English-Generator?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/leichongxiang/HengshuiFont-English-Generator?style=flat-square)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/leichongxiang/HengshuiFont-English-Generator?style=flat-square)
 
 </div>
 

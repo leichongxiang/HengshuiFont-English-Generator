@@ -25,11 +25,11 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
-  // Set base path for GitHub Pages (uncomment and modify if using custom domain)
-  // basePath: '/english-vocabulary-generator',
+  // Set base path for GitHub Pages
+  basePath: '/HengshuiFont-English-Generator',
 
-  // Asset prefix for GitHub Pages (uncomment and modify if using custom domain)
-  // assetPrefix: '/english-vocabulary-generator/',
+  // Asset prefix for GitHub Pages
+  assetPrefix: '/HengshuiFont-English-Generator/',
 
   // Trailing slash for better compatibility
   trailingSlash: true,
