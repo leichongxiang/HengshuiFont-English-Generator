@@ -25,16 +25,6 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
-  // Skip linting during build for faster deployment
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-
-  // Skip type checking during build for faster deployment
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-
   // Set base path for GitHub Pages (uncomment and modify if using custom domain)
   // basePath: '/english-vocabulary-generator',
 

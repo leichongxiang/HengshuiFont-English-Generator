@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f0f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gridGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main Background Circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGradient)" stroke="rgba(255,255,255,0.2)" stroke-width="4"/>
+  
+  <!-- Outer Ring -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  
+  <!-- Writing Grid Lines (Hengshui Style) -->
+  <g id="writingGrid" transform="translate(156, 180)">
+    <!-- Top line -->
+    <line x1="0" y1="20" x2="200" y2="20" stroke="url(#gridGradient)" stroke-width="2" opacity="0.9"/>
+    <!-- Upper middle line -->
+    <line x1="0" y1="40" x2="200" y2="40" stroke="url(#gridGradient)" stroke-width="1.5" opacity="0.7" stroke-dasharray="5,5"/>
+    <!-- Lower middle line -->
+    <line x1="0" y1="60" x2="200" y2="60" stroke="url(#gridGradient)" stroke-width="1.5" opacity="0.7" stroke-dasharray="5,5"/>
+    <!-- Bottom line -->
+    <line x1="0" y1="80" x2="200" y2="80" stroke="url(#gridGradient)" stroke-width="2" opacity="0.9"/>
+    
+    <!-- Vertical guidelines -->
+    <line x1="40" y1="20" x2="40" y2="80" stroke="url(#gridGradient)" stroke-width="1" opacity="0.5" stroke-dasharray="3,3"/>
+    <line x1="80" y1="20" x2="80" y2="80" stroke="url(#gridGradient)" stroke-width="1" opacity="0.5" stroke-dasharray="3,3"/>
+    <line x1="120" y1="20" x2="120" y2="80" stroke="url(#gridGradient)" stroke-width="1" opacity="0.5" stroke-dasharray="3,3"/>
+    <line x1="160" y1="20" x2="160" y2="80" stroke="url(#gridGradient)" stroke-width="1" opacity="0.5" stroke-dasharray="3,3"/>
+  </g>
+  
+  <!-- Sample English Text on Grid -->
+  <g id="sampleText" transform="translate(156, 180)">
+    <text x="20" y="55" font-family="serif" font-size="24" font-weight="bold" fill="url(#textGradient)" opacity="0.9">Hello</text>
+  </g>
+  
+  <!-- Book Icon -->
+  <g id="bookIcon" transform="translate(200, 120)">
+    <rect x="0" y="0" width="80" height="60" rx="4" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+    <rect x="8" y="8" width="64" height="44" rx="2" fill="rgba(255,255,255,0.1)"/>
+    <line x1="16" y1="20" x2="64" y2="20" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+    <line x1="16" y1="28" x2="56" y2="28" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+    <line x1="16" y1="36" x2="60" y2="36" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+    <line x1="16" y1="44" x2="52" y2="44" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+  </g>
+  
+  <!-- Pencil Icon -->
+  <g id="pencilIcon" transform="translate(280, 320)">
+    <rect x="0" y="0" width="6" height="40" rx="3" fill="rgba(255,255,255,0.8)" transform="rotate(45 3 20)"/>
+    <polygon points="0,35 6,35 3,45" fill="rgba(255,255,255,0.6)" transform="rotate(45 3 20)"/>
+    <circle cx="3" cy="5" r="2" fill="rgba(255,255,255,0.9)" transform="rotate(45 3 20)"/>
+  </g>
+  
+  <!-- Chinese Characters (衡水) -->
+  <g id="chineseText" transform="translate(180, 300)">
+    <text x="0" y="0" font-family="serif" font-size="32" font-weight="bold" fill="url(#textGradient)" opacity="0.8">衡水</text>
+  </g>
+  
+  <!-- English Text -->
+  <g id="englishText" transform="translate(160, 340)">
+    <text x="0" y="0" font-family="sans-serif" font-size="16" font-weight="600" fill="url(#textGradient)" opacity="0.9">ENGLISH</text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <g id="decorativeElements">
+    <!-- Stars -->
+    <g transform="translate(120, 140)">
+      <polygon points="0,-8 2,-2 8,-2 3,2 5,8 0,4 -5,8 -3,2 -8,-2 -2,-2" fill="rgba(255,255,255,0.6)" opacity="0.7"/>
+    </g>
+    <g transform="translate(380, 200)">
+      <polygon points="0,-6 1.5,-1.5 6,-1.5 2.25,1.5 3.75,6 0,3 -3.75,6 -2.25,1.5 -6,-1.5 -1.5,-1.5" fill="rgba(255,255,255,0.5)" opacity="0.6"/>
+    </g>
+    <g transform="translate(140, 360)">
+      <polygon points="0,-5 1,-1 5,-1 2,1 3,5 0,2.5 -3,5 -2,1 -5,-1 -1,-1" fill="rgba(255,255,255,0.4)" opacity="0.5"/>
+    </g>
+    
+    <!-- Dots -->
+    <circle cx="350" cy="150" r="3" fill="rgba(255,255,255,0.4)" opacity="0.6"/>
+    <circle cx="160" cy="120" r="2" fill="rgba(255,255,255,0.3)" opacity="0.5"/>
+    <circle cx="380" cy="320" r="2.5" fill="rgba(255,255,255,0.3)" opacity="0.4"/>
+  </g>
+  
+  <!-- Subtle Shadow Effect -->
+  <circle cx="256" cy="256" r="240" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="1"/>
+</svg>
