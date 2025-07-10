@@ -1,0 +1,2991 @@
+{
+  "vocabulary": [
+    {
+      "id": "0100001",
+      "word": "hello",
+      "phonetic": "/həˈloʊ/",
+      "translation": "你好",
+      "grade": "primary1",
+      "category": "日常用语",
+      "difficulty": "easy",
+      "partOfSpeech": "interjection",
+      "example": "Hello, how are you?",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 10,
+      "collocations": [
+        "hello there",
+        "say hello"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100002",
+      "word": "hi",
+      "phonetic": "/haɪ/",
+      "translation": "嗨",
+      "grade": "primary1",
+      "category": "日常用语",
+      "difficulty": "easy",
+      "partOfSpeech": "interjection",
+      "example": "Hi! Nice to meet you.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 10,
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100003",
+      "word": "bye",
+      "phonetic": "/baɪ/",
+      "translation": "再见",
+      "grade": "primary1",
+      "category": "日常用语",
+      "difficulty": "easy",
+      "partOfSpeech": "interjection",
+      "example": "Bye! See you tomorrow.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 10,
+      "collocations": [
+        "bye bye",
+        "say bye"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100004",
+      "word": "thank",
+      "phonetic": "/θæŋk/",
+      "translation": "谢谢",
+      "grade": "primary1",
+      "category": "日常用语",
+      "difficulty": "easy",
+      "partOfSpeech": "verb",
+      "example": "Thank you very much.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 10,
+      "collocations": [
+        "thank you",
+        "thank God"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100005",
+      "word": "please",
+      "phonetic": "/pliːz/",
+      "translation": "请",
+      "grade": "primary1",
+      "category": "日常用语",
+      "difficulty": "easy",
+      "partOfSpeech": "adverb",
+      "example": "Please sit down.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 10,
+      "collocations": [
+        "please help",
+        "please come"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100006",
+      "word": "sorry",
+      "phonetic": "/ˈsɔːri/",
+      "translation": "对不起",
+      "grade": "primary1",
+      "category": "日常用语",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "Sorry, I am late.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "sorry for",
+        "feel sorry"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100007",
+      "word": "I",
+      "phonetic": "/aɪ/",
+      "translation": "我",
+      "grade": "primary1",
+      "category": "代词",
+      "difficulty": "easy",
+      "partOfSpeech": "pronoun",
+      "example": "I am a student.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 10,
+      "collocations": [
+        "I am",
+        "I have",
+        "I like"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100008",
+      "word": "you",
+      "phonetic": "/juː/",
+      "translation": "你",
+      "grade": "primary1",
+      "category": "代词",
+      "difficulty": "easy",
+      "partOfSpeech": "pronoun",
+      "example": "You are my friend.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 10,
+      "collocations": [
+        "you are",
+        "you have",
+        "thank you"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100009",
+      "word": "he",
+      "phonetic": "/hiː/",
+      "translation": "他",
+      "grade": "primary1",
+      "category": "代词",
+      "difficulty": "easy",
+      "partOfSpeech": "pronoun",
+      "example": "He is my brother.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 10,
+      "collocations": [
+        "he is",
+        "he has"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100010",
+      "word": "she",
+      "phonetic": "/ʃiː/",
+      "translation": "她",
+      "grade": "primary1",
+      "category": "代词",
+      "difficulty": "easy",
+      "partOfSpeech": "pronoun",
+      "example": "She is my sister.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 10,
+      "collocations": [
+        "she is",
+        "she has"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100011",
+      "word": "it",
+      "phonetic": "/ɪt/",
+      "translation": "它",
+      "grade": "primary1",
+      "category": "代词",
+      "difficulty": "easy",
+      "partOfSpeech": "pronoun",
+      "example": "It is a cat.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 10,
+      "collocations": [
+        "it is",
+        "it has"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100012",
+      "word": "we",
+      "phonetic": "/wiː/",
+      "translation": "我们",
+      "grade": "primary1",
+      "category": "代词",
+      "difficulty": "easy",
+      "partOfSpeech": "pronoun",
+      "example": "We are friends.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 9,
+      "collocations": [
+        "we are",
+        "we have"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100013",
+      "word": "they",
+      "phonetic": "/ðeɪ/",
+      "translation": "他们",
+      "grade": "primary1",
+      "category": "代词",
+      "difficulty": "easy",
+      "partOfSpeech": "pronoun",
+      "example": "They are students.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 9,
+      "collocations": [
+        "they are",
+        "they have"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100014",
+      "word": "red",
+      "phonetic": "/red/",
+      "translation": "红色",
+      "grade": "primary1",
+      "category": "颜色",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "I have a red pen.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 9,
+      "collocations": [
+        "red color",
+        "red apple",
+        "red car"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100015",
+      "word": "blue",
+      "phonetic": "/bluː/",
+      "translation": "蓝色",
+      "grade": "primary1",
+      "category": "颜色",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "The sky is blue.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 9,
+      "collocations": [
+        "blue sky",
+        "blue sea",
+        "blue book"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100016",
+      "word": "yellow",
+      "phonetic": "/ˈjeloʊ/",
+      "translation": "黄色",
+      "grade": "primary1",
+      "category": "颜色",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "The banana is yellow.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "yellow flower",
+        "yellow light"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100017",
+      "word": "green",
+      "phonetic": "/ɡriːn/",
+      "translation": "绿色",
+      "grade": "primary1",
+      "category": "颜色",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "The grass is green.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "green tree",
+        "green apple"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100018",
+      "word": "black",
+      "phonetic": "/blæk/",
+      "translation": "黑色",
+      "grade": "primary1",
+      "category": "颜色",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "I have a black cat.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "black hair",
+        "black car"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100019",
+      "word": "white",
+      "phonetic": "/waɪt/",
+      "translation": "白色",
+      "grade": "primary1",
+      "category": "颜色",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "The snow is white.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "white paper",
+        "white shirt"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100020",
+      "word": "cat",
+      "phonetic": "/kæt/",
+      "translation": "猫",
+      "grade": "primary1",
+      "category": "动物",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "The cat is sleeping.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 9,
+      "collocations": [
+        "black cat",
+        "white cat",
+        "pet cat"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100021",
+      "word": "dog",
+      "phonetic": "/dɔːɡ/",
+      "translation": "狗",
+      "grade": "primary1",
+      "category": "动物",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "My dog is very friendly.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 9,
+      "collocations": [
+        "pet dog",
+        "big dog",
+        "small dog"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100022",
+      "word": "bird",
+      "phonetic": "/bɜːrd/",
+      "translation": "鸟",
+      "grade": "primary1",
+      "category": "动物",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "The bird can fly.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 8,
+      "collocations": [
+        "little bird",
+        "bird nest"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100023",
+      "word": "fish",
+      "phonetic": "/fɪʃ/",
+      "translation": "鱼",
+      "grade": "primary1",
+      "category": "动物",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Fish live in water.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 8,
+      "collocations": [
+        "big fish",
+        "small fish"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100024",
+      "word": "duck",
+      "phonetic": "/dʌk/",
+      "translation": "鸭子",
+      "grade": "primary1",
+      "category": "动物",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "The duck is swimming.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 7,
+      "collocations": [
+        "yellow duck",
+        "duck pond"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100025",
+      "word": "apple",
+      "phonetic": "/ˈæpəl/",
+      "translation": "苹果",
+      "grade": "primary1",
+      "category": "水果",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I like to eat apples.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 5",
+      "frequency": 9,
+      "collocations": [
+        "red apple",
+        "green apple",
+        "apple juice"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100026",
+      "word": "banana",
+      "phonetic": "/bəˈnænə/",
+      "translation": "香蕉",
+      "grade": "primary1",
+      "category": "水果",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "The banana is yellow.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 5",
+      "frequency": 8,
+      "collocations": [
+        "yellow banana",
+        "banana milk"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100027",
+      "word": "orange",
+      "phonetic": "/ˈɔːrɪndʒ/",
+      "translation": "橙子",
+      "grade": "primary1",
+      "category": "水果",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "The orange is sweet.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 5",
+      "frequency": 8,
+      "collocations": [
+        "orange juice",
+        "fresh orange"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100028",
+      "word": "one",
+      "phonetic": "/wʌn/",
+      "translation": "一",
+      "grade": "primary1",
+      "category": "数字",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I have one apple.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 6",
+      "frequency": 10,
+      "collocations": [
+        "one day",
+        "one time"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100029",
+      "word": "two",
+      "phonetic": "/tuː/",
+      "translation": "二",
+      "grade": "primary1",
+      "category": "数字",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I have two hands.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 6",
+      "frequency": 10,
+      "collocations": [
+        "two days",
+        "two books"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100030",
+      "word": "three",
+      "phonetic": "/θriː/",
+      "translation": "三",
+      "grade": "primary1",
+      "category": "数字",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I see three birds.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 6",
+      "frequency": 9,
+      "collocations": [
+        "three times",
+        "three days"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100031",
+      "word": "head",
+      "phonetic": "/hed/",
+      "translation": "头",
+      "grade": "primary1",
+      "category": "身体部位",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Touch your head.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 7",
+      "frequency": 8,
+      "collocations": [
+        "my head",
+        "head teacher"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100032",
+      "word": "eye",
+      "phonetic": "/aɪ/",
+      "translation": "眼睛",
+      "grade": "primary1",
+      "category": "身体部位",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I have two eyes.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 7",
+      "frequency": 8,
+      "collocations": [
+        "blue eyes",
+        "big eyes"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100033",
+      "word": "nose",
+      "phonetic": "/noʊz/",
+      "translation": "鼻子",
+      "grade": "primary1",
+      "category": "身体部位",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Touch your nose.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 7",
+      "frequency": 8,
+      "collocations": [
+        "big nose",
+        "small nose"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100034",
+      "word": "mouth",
+      "phonetic": "/maʊθ/",
+      "translation": "嘴巴",
+      "grade": "primary1",
+      "category": "身体部位",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Open your mouth.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 7",
+      "frequency": 8,
+      "collocations": [
+        "big mouth",
+        "small mouth"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100035",
+      "word": "hand",
+      "phonetic": "/hænd/",
+      "translation": "手",
+      "grade": "primary1",
+      "category": "身体部位",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Raise your hand.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 7",
+      "frequency": 9,
+      "collocations": [
+        "left hand",
+        "right hand"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100036",
+      "word": "big",
+      "phonetic": "/bɪɡ/",
+      "translation": "大的",
+      "grade": "primary1",
+      "category": "形容词",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "It is a big house.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 8",
+      "frequency": 9,
+      "collocations": [
+        "big house",
+        "big dog"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100037",
+      "word": "small",
+      "phonetic": "/smɔːl/",
+      "translation": "小的",
+      "grade": "primary1",
+      "category": "形容词",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "It is a small cat.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 8",
+      "frequency": 9,
+      "collocations": [
+        "small house",
+        "small dog"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100038",
+      "word": "good",
+      "phonetic": "/ɡʊd/",
+      "translation": "好的",
+      "grade": "primary1",
+      "category": "形容词",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "This is a good book.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 8",
+      "frequency": 10,
+      "collocations": [
+        "good morning",
+        "good night",
+        "good job"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200001",
+      "word": "book",
+      "phonetic": "/bʊk/",
+      "translation": "书",
+      "grade": "primary2",
+      "category": "学习用品",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I read a book every day.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 10,
+      "collocations": [
+        "English book",
+        "story book",
+        "text book"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200002",
+      "word": "pen",
+      "phonetic": "/pen/",
+      "translation": "钢笔",
+      "grade": "primary2",
+      "category": "学习用品",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I write with a pen.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "blue pen",
+        "red pen",
+        "ball pen"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200003",
+      "word": "pencil",
+      "phonetic": "/ˈpensəl/",
+      "translation": "铅笔",
+      "grade": "primary2",
+      "category": "学习用品",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I draw with a pencil.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "colored pencil",
+        "pencil box"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100039",
+      "word": "afternoon",
+      "phonetic": "/ˌæftərˈnuːn/",
+      "translation": "下午",
+      "grade": "primary1",
+      "category": "时间",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Good afternoon, everyone!",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 8,
+      "collocations": [
+        "good afternoon",
+        "this afternoon"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100040",
+      "word": "night",
+      "phonetic": "/naɪt/",
+      "translation": "晚上",
+      "grade": "primary1",
+      "category": "时间",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Good night, mom!",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 8,
+      "collocations": [
+        "good night",
+        "at night",
+        "last night"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100041",
+      "word": "name",
+      "phonetic": "/neɪm/",
+      "translation": "名字",
+      "grade": "primary1",
+      "category": "个人信息",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "My name is Tom.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 10,
+      "collocations": [
+        "my name",
+        "your name",
+        "first name"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100042",
+      "word": "I",
+      "phonetic": "/aɪ/",
+      "translation": "我",
+      "grade": "primary1",
+      "category": "代词",
+      "difficulty": "easy",
+      "partOfSpeech": "pronoun",
+      "example": "I am a student.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 10,
+      "collocations": [
+        "I am",
+        "I have",
+        "I like"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100043",
+      "word": "you",
+      "phonetic": "/juː/",
+      "translation": "你",
+      "grade": "primary1",
+      "category": "代词",
+      "difficulty": "easy",
+      "partOfSpeech": "pronoun",
+      "example": "You are my friend.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 10,
+      "collocations": [
+        "you are",
+        "you have",
+        "thank you"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100044",
+      "word": "apple",
+      "phonetic": "/ˈæpəl/",
+      "translation": "苹果",
+      "grade": "primary1",
+      "category": "水果",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I like to eat apples.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 9,
+      "collocations": [
+        "red apple",
+        "green apple",
+        "apple juice"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100045",
+      "word": "banana",
+      "phonetic": "/bəˈnænə/",
+      "translation": "香蕉",
+      "grade": "primary1",
+      "category": "水果",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "The banana is yellow.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 8,
+      "collocations": [
+        "yellow banana",
+        "banana milk"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100046",
+      "word": "cat",
+      "phonetic": "/kæt/",
+      "translation": "猫",
+      "grade": "primary1",
+      "category": "动物",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "The cat is sleeping.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 5",
+      "frequency": 9,
+      "collocations": [
+        "black cat",
+        "white cat",
+        "pet cat"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100047",
+      "word": "dog",
+      "phonetic": "/dɔːɡ/",
+      "translation": "狗",
+      "grade": "primary1",
+      "category": "动物",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "My dog is very friendly.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 5",
+      "frequency": 9,
+      "collocations": [
+        "pet dog",
+        "big dog",
+        "small dog"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100048",
+      "word": "red",
+      "phonetic": "/red/",
+      "translation": "红色",
+      "grade": "primary1",
+      "category": "颜色",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "I have a red pen.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 6",
+      "frequency": 9,
+      "collocations": [
+        "red color",
+        "red apple",
+        "red car"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100049",
+      "word": "blue",
+      "phonetic": "/bluː/",
+      "translation": "蓝色",
+      "grade": "primary1",
+      "category": "颜色",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "The sky is blue.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 6",
+      "frequency": 9,
+      "collocations": [
+        "blue sky",
+        "blue sea",
+        "blue book"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100050",
+      "word": "yellow",
+      "phonetic": "/ˈjeloʊ/",
+      "translation": "黄色",
+      "grade": "primary1",
+      "category": "颜色",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "The banana is yellow.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 6",
+      "frequency": 8,
+      "collocations": [
+        "yellow flower",
+        "yellow light"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0100051",
+      "word": "green",
+      "phonetic": "/ɡriːn/",
+      "translation": "绿色",
+      "grade": "primary1",
+      "category": "颜色",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "The grass is green.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 6",
+      "frequency": 8,
+      "collocations": [
+        "green tree",
+        "green apple"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200004",
+      "word": "book",
+      "phonetic": "/bʊk/",
+      "translation": "书",
+      "grade": "primary2",
+      "category": "学习用品",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I read a book every day.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 10,
+      "collocations": [
+        "English book",
+        "story book",
+        "text book"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200005",
+      "word": "pen",
+      "phonetic": "/pen/",
+      "translation": "钢笔",
+      "grade": "primary2",
+      "category": "学习用品",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I write with a pen.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "blue pen",
+        "red pen",
+        "ball pen"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200006",
+      "word": "pencil",
+      "phonetic": "/ˈpensəl/",
+      "translation": "铅笔",
+      "grade": "primary2",
+      "category": "学习用品",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I draw with a pencil.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "colored pencil",
+        "pencil box"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200007",
+      "word": "one",
+      "phonetic": "/wʌn/",
+      "translation": "一",
+      "grade": "primary2",
+      "category": "数字",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I have one apple.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 10,
+      "collocations": [
+        "one day",
+        "one time"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200008",
+      "word": "two",
+      "phonetic": "/tuː/",
+      "translation": "二",
+      "grade": "primary2",
+      "category": "数字",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I have two hands.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 10,
+      "collocations": [
+        "two days",
+        "two books"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700001",
+      "word": "family",
+      "phonetic": "/ˈfæməli/",
+      "translation": "家庭",
+      "grade": "grade7",
+      "category": "家庭",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I love my family.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "big family",
+        "happy family",
+        "family photo"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700002",
+      "word": "school",
+      "phonetic": "/skuːl/",
+      "translation": "学校",
+      "grade": "grade7",
+      "category": "学习",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I go to school every day.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 10,
+      "collocations": [
+        "primary school",
+        "go to school",
+        "school bus"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700003",
+      "word": "teacher",
+      "phonetic": "/ˈtiːtʃər/",
+      "translation": "老师",
+      "grade": "grade7",
+      "category": "学习",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "My teacher is very kind.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "English teacher",
+        "math teacher",
+        "good teacher"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700004",
+      "word": "student",
+      "phonetic": "/ˈstuːdənt/",
+      "translation": "学生",
+      "grade": "grade7",
+      "category": "学习",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I am a good student.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "good student",
+        "new student",
+        "primary student"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700005",
+      "word": "friend",
+      "phonetic": "/frend/",
+      "translation": "朋友",
+      "grade": "grade7",
+      "category": "人际关系",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "You are my best friend.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 9,
+      "collocations": [
+        "best friend",
+        "good friend",
+        "make friends"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200001",
+      "word": "ruler",
+      "phonetic": "/ˈruːlər/",
+      "translation": "尺子",
+      "grade": "primary2",
+      "category": "学习用品",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Use a ruler to draw a line.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 8,
+      "collocations": [
+        "long ruler",
+        "short ruler"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200002",
+      "word": "eraser",
+      "phonetic": "/ɪˈreɪsər/",
+      "translation": "橡皮",
+      "grade": "primary2",
+      "category": "学习用品",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I need an eraser.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 8,
+      "collocations": [
+        "pink eraser",
+        "rubber eraser"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200003",
+      "word": "bag",
+      "phonetic": "/bæɡ/",
+      "translation": "书包",
+      "grade": "primary2",
+      "category": "学习用品",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "My bag is heavy.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "school bag",
+        "heavy bag"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200004",
+      "word": "four",
+      "phonetic": "/fɔːr/",
+      "translation": "四",
+      "grade": "primary2",
+      "category": "数字",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I have four books.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 9,
+      "collocations": [
+        "four times",
+        "four days"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200005",
+      "word": "five",
+      "phonetic": "/faɪv/",
+      "translation": "五",
+      "grade": "primary2",
+      "category": "数字",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I have five fingers.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 9,
+      "collocations": [
+        "five minutes",
+        "five days"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200006",
+      "word": "six",
+      "phonetic": "/sɪks/",
+      "translation": "六",
+      "grade": "primary2",
+      "category": "数字",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Six plus four is ten.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 8,
+      "collocations": [
+        "six o\\",
+        "six days"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200007",
+      "word": "seven",
+      "phonetic": "/ˈsevən/",
+      "translation": "七",
+      "grade": "primary2",
+      "category": "数字",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "There are seven days in a week.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 8,
+      "collocations": [
+        "seven days",
+        "seven years"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200008",
+      "word": "eight",
+      "phonetic": "/eɪt/",
+      "translation": "八",
+      "grade": "primary2",
+      "category": "数字",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I go to bed at eight.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 8,
+      "collocations": [
+        "eight o\\",
+        "eight years"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200009",
+      "word": "nine",
+      "phonetic": "/naɪn/",
+      "translation": "九",
+      "grade": "primary2",
+      "category": "数字",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Nine plus one is ten.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 8,
+      "collocations": [
+        "nine o\\",
+        "nine years"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200010",
+      "word": "ten",
+      "phonetic": "/ten/",
+      "translation": "十",
+      "grade": "primary2",
+      "category": "数字",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I have ten fingers.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 9,
+      "collocations": [
+        "ten minutes",
+        "ten years"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200011",
+      "word": "morning",
+      "phonetic": "/ˈmɔːrnɪŋ/",
+      "translation": "早晨",
+      "grade": "primary2",
+      "category": "时间",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Good morning, teacher!",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 9,
+      "collocations": [
+        "good morning",
+        "this morning",
+        "morning class"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200012",
+      "word": "afternoon",
+      "phonetic": "/ˌæftərˈnuːn/",
+      "translation": "下午",
+      "grade": "primary2",
+      "category": "时间",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Good afternoon, everyone!",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "good afternoon",
+        "this afternoon"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200013",
+      "word": "evening",
+      "phonetic": "/ˈiːvnɪŋ/",
+      "translation": "晚上",
+      "grade": "primary2",
+      "category": "时间",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Good evening, mom!",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "good evening",
+        "this evening"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200014",
+      "word": "night",
+      "phonetic": "/naɪt/",
+      "translation": "夜晚",
+      "grade": "primary2",
+      "category": "时间",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Good night, dad!",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "good night",
+        "at night",
+        "last night"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200015",
+      "word": "cake",
+      "phonetic": "/keɪk/",
+      "translation": "蛋糕",
+      "grade": "primary2",
+      "category": "食物",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I like chocolate cake.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 8,
+      "collocations": [
+        "birthday cake",
+        "chocolate cake"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200016",
+      "word": "bread",
+      "phonetic": "/bred/",
+      "translation": "面包",
+      "grade": "primary2",
+      "category": "食物",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I eat bread for breakfast.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 8,
+      "collocations": [
+        "fresh bread",
+        "white bread"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200017",
+      "word": "milk",
+      "phonetic": "/mɪlk/",
+      "translation": "牛奶",
+      "grade": "primary2",
+      "category": "食物",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I drink milk every day.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 9,
+      "collocations": [
+        "fresh milk",
+        "hot milk"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200018",
+      "word": "water",
+      "phonetic": "/ˈwɔːtər/",
+      "translation": "水",
+      "grade": "primary2",
+      "category": "食物",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I need some water.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 10,
+      "collocations": [
+        "cold water",
+        "hot water"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200019",
+      "word": "ball",
+      "phonetic": "/bɔːl/",
+      "translation": "球",
+      "grade": "primary2",
+      "category": "玩具",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Let\\",
+      "textbookVersion": "PEP",
+      "unit": "Unit 5",
+      "frequency": 8,
+      "collocations": [
+        "football",
+        "basketball"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200020",
+      "word": "doll",
+      "phonetic": "/dɑːl/",
+      "translation": "娃娃",
+      "grade": "primary2",
+      "category": "玩具",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "She has a beautiful doll.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 5",
+      "frequency": 7,
+      "collocations": [
+        "baby doll",
+        "toy doll"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0200021",
+      "word": "car",
+      "phonetic": "/kɑːr/",
+      "translation": "汽车",
+      "grade": "primary2",
+      "category": "玩具",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I have a toy car.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 5",
+      "frequency": 9,
+      "collocations": [
+        "toy car",
+        "red car"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300001",
+      "word": "family",
+      "phonetic": "/ˈfæməli/",
+      "translation": "家庭",
+      "grade": "primary3",
+      "category": "家庭",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I love my family.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "big family",
+        "happy family",
+        "family photo"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300002",
+      "word": "father",
+      "phonetic": "/ˈfɑːðər/",
+      "translation": "父亲",
+      "grade": "primary3",
+      "category": "家庭",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "My father is a teacher.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "my father",
+        "dear father"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300003",
+      "word": "mother",
+      "phonetic": "/ˈmʌðər/",
+      "translation": "母亲",
+      "grade": "primary3",
+      "category": "家庭",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "My mother is very kind.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "my mother",
+        "dear mother"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300004",
+      "word": "brother",
+      "phonetic": "/ˈbrʌðər/",
+      "translation": "兄弟",
+      "grade": "primary3",
+      "category": "家庭",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I have a younger brother.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 8,
+      "collocations": [
+        "big brother",
+        "little brother"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300005",
+      "word": "sister",
+      "phonetic": "/ˈsɪstər/",
+      "translation": "姐妹",
+      "grade": "primary3",
+      "category": "家庭",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "My sister is very smart.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 8,
+      "collocations": [
+        "big sister",
+        "little sister"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300006",
+      "word": "school",
+      "phonetic": "/skuːl/",
+      "translation": "学校",
+      "grade": "primary3",
+      "category": "学校",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I go to school every day.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 10,
+      "collocations": [
+        "primary school",
+        "go to school",
+        "school bus"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300007",
+      "word": "teacher",
+      "phonetic": "/ˈtiːtʃər/",
+      "translation": "老师",
+      "grade": "primary3",
+      "category": "学校",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "My teacher is very kind.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 9,
+      "collocations": [
+        "English teacher",
+        "math teacher",
+        "good teacher"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300008",
+      "word": "student",
+      "phonetic": "/ˈstuːdənt/",
+      "translation": "学生",
+      "grade": "primary3",
+      "category": "学校",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I am a good student.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 9,
+      "collocations": [
+        "good student",
+        "new student",
+        "primary student"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300009",
+      "word": "friend",
+      "phonetic": "/frend/",
+      "translation": "朋友",
+      "grade": "primary3",
+      "category": "人际关系",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "You are my best friend.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 9,
+      "collocations": [
+        "best friend",
+        "good friend",
+        "make friends"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300010",
+      "word": "run",
+      "phonetic": "/rʌn/",
+      "translation": "跑",
+      "grade": "primary3",
+      "category": "动作",
+      "difficulty": "easy",
+      "partOfSpeech": "verb",
+      "example": "I can run very fast.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "run fast",
+        "run away"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300011",
+      "word": "jump",
+      "phonetic": "/dʒʌmp/",
+      "translation": "跳",
+      "grade": "primary3",
+      "category": "动作",
+      "difficulty": "easy",
+      "partOfSpeech": "verb",
+      "example": "The rabbit can jump high.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "jump high",
+        "jump up"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300012",
+      "word": "walk",
+      "phonetic": "/wɔːk/",
+      "translation": "走",
+      "grade": "primary3",
+      "category": "动作",
+      "difficulty": "easy",
+      "partOfSpeech": "verb",
+      "example": "I walk to school.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 9,
+      "collocations": [
+        "walk slowly",
+        "walk fast"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300013",
+      "word": "swim",
+      "phonetic": "/swɪm/",
+      "translation": "游泳",
+      "grade": "primary3",
+      "category": "动作",
+      "difficulty": "easy",
+      "partOfSpeech": "verb",
+      "example": "Fish can swim in water.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 7,
+      "collocations": [
+        "swim fast",
+        "swim well"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0300014",
+      "word": "fly",
+      "phonetic": "/flaɪ/",
+      "translation": "飞",
+      "grade": "primary3",
+      "category": "动作",
+      "difficulty": "easy",
+      "partOfSpeech": "verb",
+      "example": "Birds can fly in the sky.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 7,
+      "collocations": [
+        "fly high",
+        "fly away"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0400001",
+      "word": "English",
+      "phonetic": "/ˈɪŋɡlɪʃ/",
+      "translation": "英语",
+      "grade": "primary4",
+      "category": "学科",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I like English very much.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 10,
+      "collocations": [
+        "English class",
+        "English teacher"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0400002",
+      "word": "math",
+      "phonetic": "/mæθ/",
+      "translation": "数学",
+      "grade": "primary4",
+      "category": "学科",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Math is very important.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 10,
+      "collocations": [
+        "math class",
+        "math teacher"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0400003",
+      "word": "Chinese",
+      "phonetic": "/tʃaɪˈniːz/",
+      "translation": "中文",
+      "grade": "primary4",
+      "category": "学科",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Chinese is my native language.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "Chinese class",
+        "Chinese teacher"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0400004",
+      "word": "music",
+      "phonetic": "/ˈmjuːzɪk/",
+      "translation": "音乐",
+      "grade": "primary4",
+      "category": "学科",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I love music class.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 8,
+      "collocations": [
+        "music class",
+        "beautiful music"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0400005",
+      "word": "art",
+      "phonetic": "/ɑːrt/",
+      "translation": "美术",
+      "grade": "primary4",
+      "category": "学科",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Art class is very fun.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 8,
+      "collocations": [
+        "art class",
+        "art teacher"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0400006",
+      "word": "room",
+      "phonetic": "/ruːm/",
+      "translation": "房间",
+      "grade": "primary4",
+      "category": "房间",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "This is my room.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 8,
+      "collocations": [
+        "my room",
+        "big room"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0400007",
+      "word": "bed",
+      "phonetic": "/bed/",
+      "translation": "床",
+      "grade": "primary4",
+      "category": "房间",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I sleep on my bed.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 8,
+      "collocations": [
+        "my bed",
+        "big bed"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0400008",
+      "word": "desk",
+      "phonetic": "/desk/",
+      "translation": "桌子",
+      "grade": "primary4",
+      "category": "房间",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I do homework at my desk.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 8,
+      "collocations": [
+        "my desk",
+        "study desk"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0400009",
+      "word": "chair",
+      "phonetic": "/tʃer/",
+      "translation": "椅子",
+      "grade": "primary4",
+      "category": "房间",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Please sit on the chair.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 8,
+      "collocations": [
+        "my chair",
+        "comfortable chair"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0400010",
+      "word": "sunny",
+      "phonetic": "/ˈsʌni/",
+      "translation": "晴朗的",
+      "grade": "primary4",
+      "category": "天气",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "It is sunny today.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "sunny day",
+        "sunny weather"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0400011",
+      "word": "rainy",
+      "phonetic": "/ˈreɪni/",
+      "translation": "下雨的",
+      "grade": "primary4",
+      "category": "天气",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "It is rainy outside.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "rainy day",
+        "rainy weather"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0400012",
+      "word": "cloudy",
+      "phonetic": "/ˈklaʊdi/",
+      "translation": "多云的",
+      "grade": "primary4",
+      "category": "天气",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "The sky is cloudy.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 7,
+      "collocations": [
+        "cloudy sky",
+        "cloudy day"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0400013",
+      "word": "windy",
+      "phonetic": "/ˈwɪndi/",
+      "translation": "有风的",
+      "grade": "primary4",
+      "category": "天气",
+      "difficulty": "easy",
+      "partOfSpeech": "adjective",
+      "example": "It is very windy today.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 7,
+      "collocations": [
+        "windy day",
+        "windy weather"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700001",
+      "word": "study",
+      "phonetic": "/ˈstʌdi/",
+      "translation": "学习",
+      "grade": "grade7",
+      "category": "学习",
+      "difficulty": "easy",
+      "partOfSpeech": "verb",
+      "example": "I study English every day.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 10,
+      "collocations": [
+        "study hard",
+        "study for exam"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700002",
+      "word": "homework",
+      "phonetic": "/ˈhoʊmwɜːrk/",
+      "translation": "家庭作业",
+      "grade": "grade7",
+      "category": "学习",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I need to finish my homework.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "do homework",
+        "finish homework"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700003",
+      "word": "exam",
+      "phonetic": "/ɪɡˈzæm/",
+      "translation": "考试",
+      "grade": "grade7",
+      "category": "学习",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "We have an English exam tomorrow.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 9,
+      "collocations": [
+        "take exam",
+        "pass exam"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700004",
+      "word": "grade",
+      "phonetic": "/ɡreɪd/",
+      "translation": "年级；成绩",
+      "grade": "grade7",
+      "category": "学习",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I am in grade seven.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 8,
+      "collocations": [
+        "good grade",
+        "high grade"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700005",
+      "word": "subject",
+      "phonetic": "/ˈsʌbdʒɪkt/",
+      "translation": "科目",
+      "grade": "grade7",
+      "category": "学习",
+      "difficulty": "medium",
+      "partOfSpeech": "noun",
+      "example": "Math is my favorite subject.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 8,
+      "collocations": [
+        "favorite subject",
+        "difficult subject"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700006",
+      "word": "breakfast",
+      "phonetic": "/ˈbrekfəst/",
+      "translation": "早餐",
+      "grade": "grade7",
+      "category": "日常活动",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I have breakfast at 7 o\\",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 8,
+      "collocations": [
+        "have breakfast",
+        "eat breakfast"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700007",
+      "word": "lunch",
+      "phonetic": "/lʌntʃ/",
+      "translation": "午餐",
+      "grade": "grade7",
+      "category": "日常活动",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "We have lunch at school.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 8,
+      "collocations": [
+        "have lunch",
+        "eat lunch"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700008",
+      "word": "dinner",
+      "phonetic": "/ˈdɪnər/",
+      "translation": "晚餐",
+      "grade": "grade7",
+      "category": "日常活动",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "My family has dinner together.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 8,
+      "collocations": [
+        "have dinner",
+        "cook dinner"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700009",
+      "word": "exercise",
+      "phonetic": "/ˈeksərsaɪz/",
+      "translation": "锻炼",
+      "grade": "grade7",
+      "category": "日常活动",
+      "difficulty": "medium",
+      "partOfSpeech": "verb",
+      "example": "I exercise every morning.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 2",
+      "frequency": 7,
+      "collocations": [
+        "do exercise",
+        "take exercise"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700010",
+      "word": "hobby",
+      "phonetic": "/ˈhɑːbi/",
+      "translation": "爱好",
+      "grade": "grade7",
+      "category": "兴趣爱好",
+      "difficulty": "medium",
+      "partOfSpeech": "noun",
+      "example": "Reading is my hobby.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 7,
+      "collocations": [
+        "favorite hobby",
+        "new hobby"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700011",
+      "word": "music",
+      "phonetic": "/ˈmjuːzɪk/",
+      "translation": "音乐",
+      "grade": "grade7",
+      "category": "兴趣爱好",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I love listening to music.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "listen to music",
+        "play music"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700012",
+      "word": "sport",
+      "phonetic": "/spɔːrt/",
+      "translation": "运动",
+      "grade": "grade7",
+      "category": "兴趣爱好",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "Basketball is my favorite sport.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "play sport",
+        "favorite sport"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700013",
+      "word": "movie",
+      "phonetic": "/ˈmuːvi/",
+      "translation": "电影",
+      "grade": "grade7",
+      "category": "兴趣爱好",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "We watched a movie last night.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 3",
+      "frequency": 8,
+      "collocations": [
+        "watch movie",
+        "good movie"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700014",
+      "word": "bus",
+      "phonetic": "/bʌs/",
+      "translation": "公共汽车",
+      "grade": "grade7",
+      "category": "交通工具",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I go to school by bus.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 8,
+      "collocations": [
+        "take bus",
+        "school bus"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700015",
+      "word": "train",
+      "phonetic": "/treɪn/",
+      "translation": "火车",
+      "grade": "grade7",
+      "category": "交通工具",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "The train is very fast.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 7,
+      "collocations": [
+        "take train",
+        "fast train"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700016",
+      "word": "bike",
+      "phonetic": "/baɪk/",
+      "translation": "自行车",
+      "grade": "grade7",
+      "category": "交通工具",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "I ride my bike to school.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 4",
+      "frequency": 8,
+      "collocations": [
+        "ride bike",
+        "my bike"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700017",
+      "word": "library",
+      "phonetic": "/ˈlaɪbreri/",
+      "translation": "图书馆",
+      "grade": "grade7",
+      "category": "地点",
+      "difficulty": "medium",
+      "partOfSpeech": "noun",
+      "example": "I borrow books from the library.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 5",
+      "frequency": 7,
+      "collocations": [
+        "school library",
+        "public library"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700018",
+      "word": "hospital",
+      "phonetic": "/ˈhɑːspɪtl/",
+      "translation": "医院",
+      "grade": "grade7",
+      "category": "地点",
+      "difficulty": "medium",
+      "partOfSpeech": "noun",
+      "example": "My mother works in a hospital.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 5",
+      "frequency": 7,
+      "collocations": [
+        "go to hospital",
+        "big hospital"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700019",
+      "word": "restaurant",
+      "phonetic": "/ˈrestərɑːnt/",
+      "translation": "餐厅",
+      "grade": "grade7",
+      "category": "地点",
+      "difficulty": "medium",
+      "partOfSpeech": "noun",
+      "example": "We had dinner at a restaurant.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 5",
+      "frequency": 7,
+      "collocations": [
+        "Chinese restaurant",
+        "good restaurant"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0700020",
+      "word": "park",
+      "phonetic": "/pɑːrk/",
+      "translation": "公园",
+      "grade": "grade7",
+      "category": "地点",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "We play in the park.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 5",
+      "frequency": 8,
+      "collocations": [
+        "city park",
+        "beautiful park"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0800001",
+      "word": "healthy",
+      "phonetic": "/ˈhelθi/",
+      "translation": "健康的",
+      "grade": "grade8",
+      "category": "健康",
+      "difficulty": "medium",
+      "partOfSpeech": "adjective",
+      "example": "Eating vegetables is healthy.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 8,
+      "collocations": [
+        "healthy food",
+        "stay healthy"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0800002",
+      "word": "medicine",
+      "phonetic": "/ˈmedsən/",
+      "translation": "药",
+      "grade": "grade8",
+      "category": "健康",
+      "difficulty": "medium",
+      "partOfSpeech": "noun",
+      "example": "Take this medicine twice a day.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 7,
+      "collocations": [
+        "take medicine",
+        "Chinese medicine"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "0800003",
+      "word": "doctor",
+      "phonetic": "/ˈdɑːktər/",
+      "translation": "医生",
+      "grade": "grade8",
+      "category": "健康",
+      "difficulty": "easy",
+      "partOfSpeech": "noun",
+      "example": "The doctor is very kind.",
+      "textbookVersion": "PEP",
+      "unit": "Unit 1",
+      "frequency": 8,
+      "collocations": [
+        "see doctor",
+        "good doctor"
+      ],
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat_1",
+      "name": "日常用语",
+      "description": "Category for 日常用语 related vocabulary",
+      "gradeLevel": "primary1",
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "cat_2",
+      "name": "代词",
+      "description": "Category for 代词 related vocabulary",
+      "gradeLevel": "primary1",
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "cat_3",
+      "name": "颜色",
+      "description": "Category for 颜色 related vocabulary",
+      "gradeLevel": "primary1",
+      "createdAt": "2025-07-10T03:33:37.178Z",
+      "updatedAt": "2025-07-10T03:33:37.178Z"
+    },
+    {
+      "id": "cat_4",
+      "name": "动物",
+      "description": "Category for 动物 related vocabulary",
+      "gradeLevel": "primary1",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_5",
+      "name": "水果",
+      "description": "Category for 水果 related vocabulary",
+      "gradeLevel": "primary1",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_6",
+      "name": "数字",
+      "description": "Category for 数字 related vocabulary",
+      "gradeLevel": "primary1",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_7",
+      "name": "身体部位",
+      "description": "Category for 身体部位 related vocabulary",
+      "gradeLevel": "primary1",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_8",
+      "name": "形容词",
+      "description": "Category for 形容词 related vocabulary",
+      "gradeLevel": "primary1",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_9",
+      "name": "学习用品",
+      "description": "Category for 学习用品 related vocabulary",
+      "gradeLevel": "primary2",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_10",
+      "name": "时间",
+      "description": "Category for 时间 related vocabulary",
+      "gradeLevel": "primary1",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_11",
+      "name": "个人信息",
+      "description": "Category for 个人信息 related vocabulary",
+      "gradeLevel": "primary1",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_12",
+      "name": "家庭",
+      "description": "Category for 家庭 related vocabulary",
+      "gradeLevel": "grade7",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_13",
+      "name": "学习",
+      "description": "Category for 学习 related vocabulary",
+      "gradeLevel": "grade7",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_14",
+      "name": "人际关系",
+      "description": "Category for 人际关系 related vocabulary",
+      "gradeLevel": "grade7",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_15",
+      "name": "食物",
+      "description": "Category for 食物 related vocabulary",
+      "gradeLevel": "primary2",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_16",
+      "name": "玩具",
+      "description": "Category for 玩具 related vocabulary",
+      "gradeLevel": "primary2",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_17",
+      "name": "学校",
+      "description": "Category for 学校 related vocabulary",
+      "gradeLevel": "primary3",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_18",
+      "name": "动作",
+      "description": "Category for 动作 related vocabulary",
+      "gradeLevel": "primary3",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_19",
+      "name": "学科",
+      "description": "Category for 学科 related vocabulary",
+      "gradeLevel": "primary4",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_20",
+      "name": "房间",
+      "description": "Category for 房间 related vocabulary",
+      "gradeLevel": "primary4",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_21",
+      "name": "天气",
+      "description": "Category for 天气 related vocabulary",
+      "gradeLevel": "primary4",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_22",
+      "name": "日常活动",
+      "description": "Category for 日常活动 related vocabulary",
+      "gradeLevel": "grade7",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_23",
+      "name": "兴趣爱好",
+      "description": "Category for 兴趣爱好 related vocabulary",
+      "gradeLevel": "grade7",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_24",
+      "name": "交通工具",
+      "description": "Category for 交通工具 related vocabulary",
+      "gradeLevel": "grade7",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_25",
+      "name": "地点",
+      "description": "Category for 地点 related vocabulary",
+      "gradeLevel": "grade7",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    },
+    {
+      "id": "cat_26",
+      "name": "健康",
+      "description": "Category for 健康 related vocabulary",
+      "gradeLevel": "grade8",
+      "createdAt": "2025-07-10T03:33:37.179Z",
+      "updatedAt": "2025-07-10T03:33:37.179Z"
+    }
+  ],
+  "userProgress": [],
+  "importSessions": [],
+  "stats": {
+    "totalVocabulary": 135,
+    "vocabularyByGrade": {
+      "primary1": 51,
+      "primary2": 29,
+      "primary3": 14,
+      "primary4": 13,
+      "primary5": 0,
+      "primary6": 0,
+      "grade7": 25,
+      "grade8": 3,
+      "grade9": 0
+    },
+    "vocabularyByCategory": {
+      "日常用语": 6,
+      "代词": 9,
+      "颜色": 10,
+      "动物": 7,
+      "水果": 5,
+      "数字": 12,
+      "身体部位": 5,
+      "形容词": 3,
+      "学习用品": 9,
+      "时间": 6,
+      "个人信息": 1,
+      "家庭": 6,
+      "学习": 8,
+      "人际关系": 2,
+      "食物": 4,
+      "玩具": 3,
+      "学校": 3,
+      "动作": 5,
+      "学科": 5,
+      "房间": 4,
+      "天气": 4,
+      "日常活动": 4,
+      "兴趣爱好": 4,
+      "交通工具": 3,
+      "地点": 4,
+      "健康": 3
+    },
+    "totalCategories": 26,
+    "totalUsers": 0,
+    "lastUpdated": "2025-07-10T03:33:37.179Z"
+  },
+  "version": "1.0.0"
+}

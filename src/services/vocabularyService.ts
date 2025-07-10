@@ -16,7 +16,7 @@
 
 import { DatabaseManager } from '../database/manager';
 import { VocabularyWord, VocabularyQuery, GradeLevel, DatabaseStats } from '../database/schema';
-import path from 'path';
+// path module will be imported dynamically when needed
 
 /**
  * Vocabulary Service
@@ -28,8 +28,8 @@ export class VocabularyService {
   private isInitialized: boolean = false;
 
   private constructor() {
-    // Use relative path from project root
-    const dbPath = path.join(process.cwd(), 'data', 'vocabulary.db.json');
+    // Use relative path that works in both environments
+    const dbPath = 'data/vocabulary.db.json';
     this.dbManager = new DatabaseManager(dbPath);
   }
 

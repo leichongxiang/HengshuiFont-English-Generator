@@ -17,19 +17,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Enable static exports for GitHub Pages
-  output: 'export',
+  // Enable static exports for GitHub Pages (only in production)
+  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
 
   // Disable image optimization for static export
   images: {
     unoptimized: true,
   },
 
-  // Set base path for GitHub Pages
-  basePath: '/HengshuiFont-English-Generator',
+  // Set base path for GitHub Pages (only in production)
+  basePath: process.env.NODE_ENV === 'production' ? '/HengshuiFont-English-Generator' : '',
 
-  // Asset prefix for GitHub Pages
-  assetPrefix: '/HengshuiFont-English-Generator/',
+  // Asset prefix for GitHub Pages (only in production)
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/HengshuiFont-English-Generator/' : '',
 
   // Trailing slash for better compatibility
   trailingSlash: true,
@@ -41,14 +41,26 @@ const nextConfig: NextConfig = {
 
   // Webpack configuration
   webpack: (config, { isServer }) => {
-    // Handle PDF generation in client-side only
+    // Handle Node.js modules in client-side
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
         path: false,
         crypto: false,
+        os: false,
+        stream: false,
+        util: false,
       };
+    }
+
+    // Ignore specific modules that use Node.js APIs
+    config.externals = config.externals || [];
+    if (!isServer) {
+      config.externals.push({
+        'fs': 'commonjs fs',
+        'path': 'commonjs path',
+      });
     }
 
     return config;
