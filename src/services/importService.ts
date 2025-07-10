@@ -19,7 +19,7 @@ import { VocabularyWord, ImportSession, ImportError } from '../database/schema';
 import { FileParser, ParseResult } from '../utils/fileParser';
 import { ImportValidator, ImportValidationResult } from '../utils/importValidator';
 import { VocabularyIdGenerator } from '../utils/idGenerator';
-import path from 'path';
+// path module will be imported dynamically when needed
 
 export interface ImportOptions {
   skipDuplicates?: boolean;
@@ -49,7 +49,8 @@ export class ImportService {
   private isInitialized: boolean = false;
 
   private constructor() {
-    const dbPath = path.join(process.cwd(), 'data', 'vocabulary.db.json');
+    // Use relative path that works in both environments
+    const dbPath = 'data/vocabulary.db.json';
     this.dbManager = new DatabaseManager(dbPath);
   }
 

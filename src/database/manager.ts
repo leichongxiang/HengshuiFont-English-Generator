@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-import fs from 'fs';
-import path from 'path';
+// Note: fs and path are only available in Node.js environment
+// For client-side usage, we'll use alternative approaches
 import {
   Database,
   VocabularyWord,
@@ -40,7 +40,7 @@ export class DatabaseManager {
   private isInitialized: boolean = false;
 
   constructor(dbPath: string = 'data/vocabulary.db.json') {
-    this.dbPath = path.resolve(dbPath);
+    this.dbPath = dbPath;
     this.db = this.getDefaultDatabase();
   }
 
@@ -72,12 +72,27 @@ export class DatabaseManager {
 
   /**
    * Load database from file
+   * In client-side, we'll load from the static JSON file
    */
   private async loadDatabase(): Promise<void> {
     try {
-      const data = fs.readFileSync(this.dbPath, 'utf8');
-      this.db = JSON.parse(data);
-      
+      // Check if we're in a browser environment
+      if (typeof window !== 'undefined') {
+        // Client-side: load from public directory
+        const response = await fetch('/data/vocabulary.db.json');
+        if (!response.ok) {
+          throw new Error(`Failed to load database: ${response.statusText}`);
+        }
+        this.db = await response.json();
+      } else {
+        // Server-side: use dynamic import to avoid bundling fs
+        const fs = await import('fs');
+        const path = await import('path');
+        const resolvedPath = path.resolve(this.dbPath);
+        const data = fs.readFileSync(resolvedPath, 'utf8');
+        this.db = JSON.parse(data);
+      }
+
       // Validate database structure
       if (!this.db.vocabulary || !this.db.categories || !this.db.userProgress) {
         throw new Error('Invalid database structure');
@@ -86,7 +101,8 @@ export class DatabaseManager {
       console.log(`Loaded database with ${this.db.vocabulary.length} vocabulary words`);
     } catch (error) {
       console.error('Failed to load database:', error);
-      throw error;
+      // Fallback to default database if loading fails
+      this.db = this.getDefaultDatabase();
     }
   }
 
@@ -106,12 +122,28 @@ export class DatabaseManager {
     try {
       // Update stats before saving
       this.updateStats();
-      
+
       const data = JSON.stringify(this.db, null, 2);
-      fs.writeFileSync(this.dbPath, data, 'utf8');
+
+      // Check if we're in a browser environment
+      if (typeof window !== 'undefined') {
+        // Client-side: save to localStorage as fallback
+        localStorage.setItem('vocabulary_db_backup', data);
+        console.log('Database saved to localStorage (client-side backup)');
+      } else {
+        // Server-side: save to file
+        const fs = await import('fs');
+        const path = await import('path');
+        const resolvedPath = path.resolve(this.dbPath);
+        fs.writeFileSync(resolvedPath, data, 'utf8');
+        console.log('Database saved to file successfully');
+      }
     } catch (error) {
       console.error('Failed to save database:', error);
-      throw error;
+      // Don't throw error in client-side to avoid breaking the app
+      if (typeof window === 'undefined') {
+        throw error;
+      }
     }
   }
 
