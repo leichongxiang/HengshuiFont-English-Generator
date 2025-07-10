@@ -4,7 +4,7 @@ import { VocabularyWord } from './vocabulary';
 export const extendedVocabularyData: VocabularyWord[] = [
   // ==================== 小学二年级 (Primary 2) 继续 ====================
   {
-    id: '65',
+    id: '0200001',
     word: 'ruler',
     phonetic: '/ˈruːlər/',
     translation: '尺子',
@@ -19,7 +19,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '66',
+    id: '0200002',
     word: 'eraser',
     phonetic: '/ɪˈreɪsər/',
     translation: '橡皮',
@@ -34,7 +34,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '67',
+    id: '0200003',
     word: 'bag',
     phonetic: '/bæɡ/',
     translation: '书包',
@@ -51,7 +51,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
 
   // 数字扩展
   {
-    id: '68',
+    id: '0200004',
     word: 'four',
     phonetic: '/fɔːr/',
     translation: '四',
@@ -66,7 +66,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '69',
+    id: '0200005',
     word: 'five',
     phonetic: '/faɪv/',
     translation: '五',
@@ -81,7 +81,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '70',
+    id: '0200006',
     word: 'six',
     phonetic: '/sɪks/',
     translation: '六',
@@ -96,7 +96,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '71',
+    id: '0200007',
     word: 'seven',
     phonetic: '/ˈsevən/',
     translation: '七',
@@ -111,7 +111,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '72',
+    id: '0200008',
     word: 'eight',
     phonetic: '/eɪt/',
     translation: '八',
@@ -126,7 +126,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '73',
+    id: '0200009',
     word: 'nine',
     phonetic: '/naɪn/',
     translation: '九',
@@ -141,7 +141,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '74',
+    id: '0200010',
     word: 'ten',
     phonetic: '/ten/',
     translation: '十',
@@ -158,7 +158,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
 
   // 时间
   {
-    id: '75',
+    id: '0200011',
     word: 'morning',
     phonetic: '/ˈmɔːrnɪŋ/',
     translation: '早晨',
@@ -173,7 +173,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '76',
+    id: '0200012',
     word: 'afternoon',
     phonetic: '/ˌæftərˈnuːn/',
     translation: '下午',
@@ -188,7 +188,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '77',
+    id: '0200013',
     word: 'evening',
     phonetic: '/ˈiːvnɪŋ/',
     translation: '晚上',
@@ -203,7 +203,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '78',
+    id: '0200014',
     word: 'night',
     phonetic: '/naɪt/',
     translation: '夜晚',
@@ -220,7 +220,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
 
   // 食物
   {
-    id: '79',
+    id: '0200015',
     word: 'cake',
     phonetic: '/keɪk/',
     translation: '蛋糕',
@@ -235,7 +235,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 4'
   },
   {
-    id: '80',
+    id: '0200016',
     word: 'bread',
     phonetic: '/bred/',
     translation: '面包',
@@ -250,7 +250,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 4'
   },
   {
-    id: '81',
+    id: '0200017',
     word: 'milk',
     phonetic: '/mɪlk/',
     translation: '牛奶',
@@ -265,7 +265,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 4'
   },
   {
-    id: '82',
+    id: '0200018',
     word: 'water',
     phonetic: '/ˈwɔːtər/',
     translation: '水',
@@ -282,7 +282,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
 
   // 玩具
   {
-    id: '83',
+    id: '0200019',
     word: 'ball',
     phonetic: '/bɔːl/',
     translation: '球',
@@ -297,7 +297,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 5'
   },
   {
-    id: '84',
+    id: '0200020',
     word: 'doll',
     phonetic: '/dɑːl/',
     translation: '娃娃',
@@ -312,7 +312,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
     unit: 'Unit 5'
   },
   {
-    id: '85',
+    id: '0200021',
     word: 'car',
     phonetic: '/kɑːr/',
     translation: '汽车',
@@ -332,7 +332,7 @@ export const extendedVocabularyData: VocabularyWord[] = [
 export const primary3Vocabulary: VocabularyWord[] = [
   // 家庭成员
   {
-    id: '86',
+    id: '0300001',
     word: 'family',
     phonetic: '/ˈfæməli/',
     translation: '家庭',
@@ -347,7 +347,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '87',
+    id: '0300002',
     word: 'father',
     phonetic: '/ˈfɑːðər/',
     translation: '父亲',
@@ -362,7 +362,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '88',
+    id: '0300003',
     word: 'mother',
     phonetic: '/ˈmʌðər/',
     translation: '母亲',
@@ -377,7 +377,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '89',
+    id: '0300004',
     word: 'brother',
     phonetic: '/ˈbrʌðər/',
     translation: '兄弟',
@@ -392,7 +392,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '90',
+    id: '0300005',
     word: 'sister',
     phonetic: '/ˈsɪstər/',
     translation: '姐妹',
@@ -409,7 +409,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
 
   // 学校相关
   {
-    id: '91',
+    id: '0300006',
     word: 'school',
     phonetic: '/skuːl/',
     translation: '学校',
@@ -424,7 +424,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '92',
+    id: '0300007',
     word: 'teacher',
     phonetic: '/ˈtiːtʃər/',
     translation: '老师',
@@ -439,7 +439,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '93',
+    id: '0300008',
     word: 'student',
     phonetic: '/ˈstuːdənt/',
     translation: '学生',
@@ -454,7 +454,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '94',
+    id: '0300009',
     word: 'friend',
     phonetic: '/frend/',
     translation: '朋友',
@@ -471,7 +471,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
 
   // 动作词汇
   {
-    id: '95',
+    id: '0300010',
     word: 'run',
     phonetic: '/rʌn/',
     translation: '跑',
@@ -486,7 +486,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '96',
+    id: '0300011',
     word: 'jump',
     phonetic: '/dʒʌmp/',
     translation: '跳',
@@ -501,7 +501,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '97',
+    id: '0300012',
     word: 'walk',
     phonetic: '/wɔːk/',
     translation: '走',
@@ -516,7 +516,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '98',
+    id: '0300013',
     word: 'swim',
     phonetic: '/swɪm/',
     translation: '游泳',
@@ -531,7 +531,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '99',
+    id: '0300014',
     word: 'fly',
     phonetic: '/flaɪ/',
     translation: '飞',
@@ -551,7 +551,7 @@ export const primary3Vocabulary: VocabularyWord[] = [
 export const primary4Vocabulary: VocabularyWord[] = [
   // 学科
   {
-    id: '100',
+    id: '0400001',
     word: 'English',
     phonetic: '/ˈɪŋɡlɪʃ/',
     translation: '英语',
@@ -566,7 +566,7 @@ export const primary4Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '101',
+    id: '0400002',
     word: 'math',
     phonetic: '/mæθ/',
     translation: '数学',
@@ -581,7 +581,7 @@ export const primary4Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '102',
+    id: '0400003',
     word: 'Chinese',
     phonetic: '/tʃaɪˈniːz/',
     translation: '中文',
@@ -596,7 +596,7 @@ export const primary4Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '103',
+    id: '0400004',
     word: 'music',
     phonetic: '/ˈmjuːzɪk/',
     translation: '音乐',
@@ -611,7 +611,7 @@ export const primary4Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '104',
+    id: '0400005',
     word: 'art',
     phonetic: '/ɑːrt/',
     translation: '美术',
@@ -628,7 +628,7 @@ export const primary4Vocabulary: VocabularyWord[] = [
 
   // 房间和家具
   {
-    id: '105',
+    id: '0400006',
     word: 'room',
     phonetic: '/ruːm/',
     translation: '房间',
@@ -643,7 +643,7 @@ export const primary4Vocabulary: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '106',
+    id: '0400007',
     word: 'bed',
     phonetic: '/bed/',
     translation: '床',
@@ -658,7 +658,7 @@ export const primary4Vocabulary: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '107',
+    id: '0400008',
     word: 'desk',
     phonetic: '/desk/',
     translation: '桌子',
@@ -673,7 +673,7 @@ export const primary4Vocabulary: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '108',
+    id: '0400009',
     word: 'chair',
     phonetic: '/tʃer/',
     translation: '椅子',
@@ -690,7 +690,7 @@ export const primary4Vocabulary: VocabularyWord[] = [
 
   // 天气
   {
-    id: '109',
+    id: '0400010',
     word: 'sunny',
     phonetic: '/ˈsʌni/',
     translation: '晴朗的',
@@ -705,7 +705,7 @@ export const primary4Vocabulary: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '110',
+    id: '0400011',
     word: 'rainy',
     phonetic: '/ˈreɪni/',
     translation: '下雨的',
@@ -720,7 +720,7 @@ export const primary4Vocabulary: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '111',
+    id: '0400012',
     word: 'cloudy',
     phonetic: '/ˈklaʊdi/',
     translation: '多云的',
@@ -735,7 +735,7 @@ export const primary4Vocabulary: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '112',
+    id: '0400013',
     word: 'windy',
     phonetic: '/ˈwɪndi/',
     translation: '有风的',

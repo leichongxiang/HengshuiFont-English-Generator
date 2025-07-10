@@ -4,7 +4,7 @@ import { VocabularyWord } from './vocabulary';
 export const grade7Vocabulary: VocabularyWord[] = [
   // 学习相关
   {
-    id: '113',
+    id: '0700001',
     word: 'study',
     phonetic: '/ˈstʌdi/',
     translation: '学习',
@@ -19,7 +19,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '114',
+    id: '0700002',
     word: 'homework',
     phonetic: '/ˈhoʊmwɜːrk/',
     translation: '家庭作业',
@@ -34,7 +34,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '115',
+    id: '0700003',
     word: 'exam',
     phonetic: '/ɪɡˈzæm/',
     translation: '考试',
@@ -49,7 +49,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '116',
+    id: '0700004',
     word: 'grade',
     phonetic: '/ɡreɪd/',
     translation: '年级；成绩',
@@ -64,7 +64,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '117',
+    id: '0700005',
     word: 'subject',
     phonetic: '/ˈsʌbdʒɪkt/',
     translation: '科目',
@@ -81,7 +81,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
 
   // 日常活动
   {
-    id: '118',
+    id: '0700006',
     word: 'breakfast',
     phonetic: '/ˈbrekfəst/',
     translation: '早餐',
@@ -96,7 +96,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '119',
+    id: '0700007',
     word: 'lunch',
     phonetic: '/lʌntʃ/',
     translation: '午餐',
@@ -111,7 +111,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '120',
+    id: '0700008',
     word: 'dinner',
     phonetic: '/ˈdɪnər/',
     translation: '晚餐',
@@ -126,7 +126,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '121',
+    id: '0700009',
     word: 'exercise',
     phonetic: '/ˈeksərsaɪz/',
     translation: '锻炼',
@@ -143,7 +143,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
 
   // 兴趣爱好
   {
-    id: '122',
+    id: '0700010',
     word: 'hobby',
     phonetic: '/ˈhɑːbi/',
     translation: '爱好',
@@ -158,7 +158,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '123',
+    id: '0700011',
     word: 'music',
     phonetic: '/ˈmjuːzɪk/',
     translation: '音乐',
@@ -173,7 +173,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '124',
+    id: '0700012',
     word: 'sport',
     phonetic: '/spɔːrt/',
     translation: '运动',
@@ -188,7 +188,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '125',
+    id: '0700013',
     word: 'movie',
     phonetic: '/ˈmuːvi/',
     translation: '电影',
@@ -205,7 +205,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
 
   // 交通工具
   {
-    id: '126',
+    id: '0700014',
     word: 'bus',
     phonetic: '/bʌs/',
     translation: '公共汽车',
@@ -220,7 +220,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 4'
   },
   {
-    id: '127',
+    id: '0700015',
     word: 'train',
     phonetic: '/treɪn/',
     translation: '火车',
@@ -235,7 +235,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 4'
   },
   {
-    id: '128',
+    id: '0700016',
     word: 'bike',
     phonetic: '/baɪk/',
     translation: '自行车',
@@ -252,7 +252,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
 
   // 地点
   {
-    id: '129',
+    id: '0700017',
     word: 'library',
     phonetic: '/ˈlaɪbreri/',
     translation: '图书馆',
@@ -267,7 +267,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 5'
   },
   {
-    id: '130',
+    id: '0700018',
     word: 'hospital',
     phonetic: '/ˈhɑːspɪtl/',
     translation: '医院',
@@ -282,7 +282,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 5'
   },
   {
-    id: '131',
+    id: '0700019',
     word: 'restaurant',
     phonetic: '/ˈrestərɑːnt/',
     translation: '餐厅',
@@ -297,7 +297,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
     unit: 'Unit 5'
   },
   {
-    id: '132',
+    id: '0700020',
     word: 'park',
     phonetic: '/pɑːrk/',
     translation: '公园',
@@ -317,7 +317,7 @@ export const grade7Vocabulary: VocabularyWord[] = [
 export const grade8Vocabulary: VocabularyWord[] = [
   // 健康
   {
-    id: '133',
+    id: '0800001',
     word: 'healthy',
     phonetic: '/ˈhelθi/',
     translation: '健康的',
@@ -332,7 +332,7 @@ export const grade8Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '134',
+    id: '0800002',
     word: 'medicine',
     phonetic: '/ˈmedsən/',
     translation: '药',
@@ -347,7 +347,7 @@ export const grade8Vocabulary: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '135',
+    id: '0800003',
     word: 'doctor',
     phonetic: '/ˈdɑːktər/',
     translation: '医生',

@@ -44,7 +44,7 @@ const vocabularyDataArray: VocabularyWord[] = [
   // ==================== 小学一年级 (Primary 1) ====================
   // 日常用语
   {
-    id: '1',
+    id: '0100001',
     word: 'hello',
     phonetic: '/həˈloʊ/',
     translation: '你好',
@@ -59,7 +59,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '2',
+    id: '0100002',
     word: 'hi',
     phonetic: '/haɪ/',
     translation: '嗨',
@@ -73,7 +73,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '3',
+    id: '0100003',
     word: 'bye',
     phonetic: '/baɪ/',
     translation: '再见',
@@ -88,7 +88,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '4',
+    id: '0100004',
     word: 'thank',
     phonetic: '/θæŋk/',
     translation: '谢谢',
@@ -103,7 +103,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '5',
+    id: '0100005',
     word: 'please',
     phonetic: '/pliːz/',
     translation: '请',
@@ -118,7 +118,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '6',
+    id: '0100006',
     word: 'sorry',
     phonetic: '/ˈsɔːri/',
     translation: '对不起',
@@ -135,7 +135,7 @@ const vocabularyDataArray: VocabularyWord[] = [
 
   // 代词
   {
-    id: '7',
+    id: '0100007',
     word: 'I',
     phonetic: '/aɪ/',
     translation: '我',
@@ -150,7 +150,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '8',
+    id: '0100008',
     word: 'you',
     phonetic: '/juː/',
     translation: '你',
@@ -165,7 +165,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '9',
+    id: '0100009',
     word: 'he',
     phonetic: '/hiː/',
     translation: '他',
@@ -180,7 +180,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '10',
+    id: '0100010',
     word: 'she',
     phonetic: '/ʃiː/',
     translation: '她',
@@ -195,7 +195,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '11',
+    id: '0100011',
     word: 'it',
     phonetic: '/ɪt/',
     translation: '它',
@@ -210,7 +210,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '12',
+    id: '0100012',
     word: 'we',
     phonetic: '/wiː/',
     translation: '我们',
@@ -225,7 +225,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '13',
+    id: '0100013',
     word: 'they',
     phonetic: '/ðeɪ/',
     translation: '他们',
@@ -242,7 +242,7 @@ const vocabularyDataArray: VocabularyWord[] = [
 
   // 颜色
   {
-    id: '14',
+    id: '0100014',
     word: 'red',
     phonetic: '/red/',
     translation: '红色',
@@ -257,7 +257,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '15',
+    id: '0100015',
     word: 'blue',
     phonetic: '/bluː/',
     translation: '蓝色',
@@ -272,7 +272,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '16',
+    id: '0100016',
     word: 'yellow',
     phonetic: '/ˈjeloʊ/',
     translation: '黄色',
@@ -287,7 +287,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '17',
+    id: '0100017',
     word: 'green',
     phonetic: '/ɡriːn/',
     translation: '绿色',
@@ -302,7 +302,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '18',
+    id: '0100018',
     word: 'black',
     phonetic: '/blæk/',
     translation: '黑色',
@@ -317,7 +317,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '19',
+    id: '0100019',
     word: 'white',
     phonetic: '/waɪt/',
     translation: '白色',
@@ -334,7 +334,7 @@ const vocabularyDataArray: VocabularyWord[] = [
 
   // 动物
   {
-    id: '20',
+    id: '0100020',
     word: 'cat',
     phonetic: '/kæt/',
     translation: '猫',
@@ -349,7 +349,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 4'
   },
   {
-    id: '21',
+    id: '0100021',
     word: 'dog',
     phonetic: '/dɔːɡ/',
     translation: '狗',
@@ -364,7 +364,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 4'
   },
   {
-    id: '22',
+    id: '0100022',
     word: 'bird',
     phonetic: '/bɜːrd/',
     translation: '鸟',
@@ -379,7 +379,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 4'
   },
   {
-    id: '23',
+    id: '0100023',
     word: 'fish',
     phonetic: '/fɪʃ/',
     translation: '鱼',
@@ -394,7 +394,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 4'
   },
   {
-    id: '24',
+    id: '0100024',
     word: 'duck',
     phonetic: '/dʌk/',
     translation: '鸭子',
@@ -411,7 +411,7 @@ const vocabularyDataArray: VocabularyWord[] = [
 
   // 水果
   {
-    id: '25',
+    id: '0100025',
     word: 'apple',
     phonetic: '/ˈæpəl/',
     translation: '苹果',
@@ -426,7 +426,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 5'
   },
   {
-    id: '26',
+    id: '0100026',
     word: 'banana',
     phonetic: '/bəˈnænə/',
     translation: '香蕉',
@@ -441,7 +441,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 5'
   },
   {
-    id: '27',
+    id: '0100027',
     word: 'orange',
     phonetic: '/ˈɔːrɪndʒ/',
     translation: '橙子',
@@ -458,7 +458,7 @@ const vocabularyDataArray: VocabularyWord[] = [
 
   // 数字
   {
-    id: '28',
+    id: '0100028',
     word: 'one',
     phonetic: '/wʌn/',
     translation: '一',
@@ -473,7 +473,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 6'
   },
   {
-    id: '29',
+    id: '0100029',
     word: 'two',
     phonetic: '/tuː/',
     translation: '二',
@@ -488,7 +488,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 6'
   },
   {
-    id: '30',
+    id: '0100030',
     word: 'three',
     phonetic: '/θriː/',
     translation: '三',
@@ -505,7 +505,7 @@ const vocabularyDataArray: VocabularyWord[] = [
 
   // 身体部位
   {
-    id: '31',
+    id: '0100031',
     word: 'head',
     phonetic: '/hed/',
     translation: '头',
@@ -520,7 +520,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 7'
   },
   {
-    id: '32',
+    id: '0100032',
     word: 'eye',
     phonetic: '/aɪ/',
     translation: '眼睛',
@@ -535,7 +535,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 7'
   },
   {
-    id: '33',
+    id: '0100033',
     word: 'nose',
     phonetic: '/noʊz/',
     translation: '鼻子',
@@ -550,7 +550,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 7'
   },
   {
-    id: '34',
+    id: '0100034',
     word: 'mouth',
     phonetic: '/maʊθ/',
     translation: '嘴巴',
@@ -565,7 +565,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 7'
   },
   {
-    id: '35',
+    id: '0100035',
     word: 'hand',
     phonetic: '/hænd/',
     translation: '手',
@@ -582,7 +582,7 @@ const vocabularyDataArray: VocabularyWord[] = [
 
   // 基本形容词
   {
-    id: '36',
+    id: '0100036',
     word: 'big',
     phonetic: '/bɪɡ/',
     translation: '大的',
@@ -597,7 +597,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 8'
   },
   {
-    id: '37',
+    id: '0100037',
     word: 'small',
     phonetic: '/smɔːl/',
     translation: '小的',
@@ -612,7 +612,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 8'
   },
   {
-    id: '38',
+    id: '0100038',
     word: 'good',
     phonetic: '/ɡʊd/',
     translation: '好的',
@@ -630,7 +630,7 @@ const vocabularyDataArray: VocabularyWord[] = [
   // ==================== 小学二年级 (Primary 2) ====================
   // 学习用品
   {
-    id: '39',
+    id: '0200001',
     word: 'book',
     phonetic: '/bʊk/',
     translation: '书',
@@ -645,7 +645,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '40',
+    id: '0200002',
     word: 'pen',
     phonetic: '/pen/',
     translation: '钢笔',
@@ -660,7 +660,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '41',
+    id: '0200003',
     word: 'pencil',
     phonetic: '/ˈpensəl/',
     translation: '铅笔',
@@ -675,7 +675,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '42',
+    id: '0100039',
     word: 'afternoon',
     phonetic: '/ˌæftərˈnuːn/',
     translation: '下午',
@@ -690,7 +690,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '43',
+    id: '0100040',
     word: 'night',
     phonetic: '/naɪt/',
     translation: '晚上',
@@ -705,7 +705,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '44',
+    id: '0100041',
     word: 'name',
     phonetic: '/neɪm/',
     translation: '名字',
@@ -720,7 +720,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '45',
+    id: '0100042',
     word: 'I',
     phonetic: '/aɪ/',
     translation: '我',
@@ -735,7 +735,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '46',
+    id: '0100043',
     word: 'you',
     phonetic: '/juː/',
     translation: '你',
@@ -750,7 +750,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '47',
+    id: '0100044',
     word: 'apple',
     phonetic: '/ˈæpəl/',
     translation: '苹果',
@@ -765,7 +765,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 4'
   },
   {
-    id: '48',
+    id: '0100045',
     word: 'banana',
     phonetic: '/bəˈnænə/',
     translation: '香蕉',
@@ -780,7 +780,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 4'
   },
   {
-    id: '49',
+    id: '0100046',
     word: 'cat',
     phonetic: '/kæt/',
     translation: '猫',
@@ -795,7 +795,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 5'
   },
   {
-    id: '50',
+    id: '0100047',
     word: 'dog',
     phonetic: '/dɔːɡ/',
     translation: '狗',
@@ -810,7 +810,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 5'
   },
   {
-    id: '51',
+    id: '0100048',
     word: 'red',
     phonetic: '/red/',
     translation: '红色',
@@ -825,7 +825,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 6'
   },
   {
-    id: '52',
+    id: '0100049',
     word: 'blue',
     phonetic: '/bluː/',
     translation: '蓝色',
@@ -840,7 +840,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 6'
   },
   {
-    id: '53',
+    id: '0100050',
     word: 'yellow',
     phonetic: '/ˈjeloʊ/',
     translation: '黄色',
@@ -855,7 +855,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 6'
   },
   {
-    id: '54',
+    id: '0100051',
     word: 'green',
     phonetic: '/ɡriːn/',
     translation: '绿色',
@@ -872,7 +872,7 @@ const vocabularyDataArray: VocabularyWord[] = [
 
   // Primary 2 - 小学二年级
   {
-    id: '55',
+    id: '0200004',
     word: 'book',
     phonetic: '/bʊk/',
     translation: '书',
@@ -887,7 +887,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '56',
+    id: '0200005',
     word: 'pen',
     phonetic: '/pen/',
     translation: '钢笔',
@@ -902,7 +902,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '57',
+    id: '0200006',
     word: 'pencil',
     phonetic: '/ˈpensəl/',
     translation: '铅笔',
@@ -917,7 +917,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '58',
+    id: '0200007',
     word: 'one',
     phonetic: '/wʌn/',
     translation: '一',
@@ -932,7 +932,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '59',
+    id: '0200008',
     word: 'two',
     phonetic: '/tuː/',
     translation: '二',
@@ -949,7 +949,7 @@ const vocabularyDataArray: VocabularyWord[] = [
 
   // Grade 7 - 初中七年级
   {
-    id: '60',
+    id: '0700001',
     word: 'family',
     phonetic: '/ˈfæməli/',
     translation: '家庭',
@@ -964,7 +964,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '61',
+    id: '0700002',
     word: 'school',
     phonetic: '/skuːl/',
     translation: '学校',
@@ -979,7 +979,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '62',
+    id: '0700003',
     word: 'teacher',
     phonetic: '/ˈtiːtʃər/',
     translation: '老师',
@@ -994,7 +994,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '63',
+    id: '0700004',
     word: 'student',
     phonetic: '/ˈstuːdənt/',
     translation: '学生',
@@ -1009,7 +1009,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '64',
+    id: '0700005',
     word: 'friend',
     phonetic: '/frend/',
     translation: '朋友',
@@ -1058,35 +1058,42 @@ export const textbookVersions = {
 
 export const ebbinghausIntervals = [1, 3, 7, 15, 30]; // days
 
-// 导入扩展词汇
-import { extendedVocabularyData, primary3Vocabulary, primary4Vocabulary } from './extendedVocabulary';
-import { grade7Vocabulary, grade8Vocabulary } from './juniorHighVocabulary';
+// Import vocabulary service for database access
+import { vocabularyService } from '../services/vocabularyService';
 
-// 合并所有词汇数据
-const allVocabularyData = [
-  ...vocabularyDataArray,
-  ...extendedVocabularyData,
-  ...primary3Vocabulary,
-  ...primary4Vocabulary,
-  ...grade7Vocabulary,
-  ...grade8Vocabulary
-];
+// Legacy export for backward compatibility
+// Note: This will be loaded from database in production
+export const vocabularyData = vocabularyDataArray;
 
-// 导出词汇数据
-export const vocabularyData = allVocabularyData;
+// Database-powered vocabulary functions
+export async function getVocabularyData() {
+  await vocabularyService.initialize();
+  return vocabularyService.getAllVocabulary();
+}
 
-// 按年级分组的词汇数据
+export async function getVocabularyByGradeAsync(grade: 'primary1' | 'primary2' | 'primary3' | 'primary4' | 'primary5' | 'primary6' | 'grade7' | 'grade8' | 'grade9') {
+  await vocabularyService.initialize();
+  return vocabularyService.getVocabularyByGrade(grade);
+}
+
+// 按年级分组的词汇数据 (Legacy - for backward compatibility)
 export const vocabularyByGrade = {
-  primary1: allVocabularyData.filter(word => word.grade === 'primary1'),
-  primary2: allVocabularyData.filter(word => word.grade === 'primary2'),
-  primary3: allVocabularyData.filter(word => word.grade === 'primary3'),
-  primary4: allVocabularyData.filter(word => word.grade === 'primary4'),
-  primary5: allVocabularyData.filter(word => word.grade === 'primary5'),
-  primary6: allVocabularyData.filter(word => word.grade === 'primary6'),
-  grade7: allVocabularyData.filter(word => word.grade === 'grade7'),
-  grade8: allVocabularyData.filter(word => word.grade === 'grade8'),
-  grade9: allVocabularyData.filter(word => word.grade === 'grade9')
+  primary1: vocabularyData.filter((word: VocabularyWord) => word.grade === 'primary1'),
+  primary2: vocabularyData.filter((word: VocabularyWord) => word.grade === 'primary2'),
+  primary3: vocabularyData.filter((word: VocabularyWord) => word.grade === 'primary3'),
+  primary4: vocabularyData.filter((word: VocabularyWord) => word.grade === 'primary4'),
+  primary5: vocabularyData.filter((word: VocabularyWord) => word.grade === 'primary5'),
+  primary6: vocabularyData.filter((word: VocabularyWord) => word.grade === 'primary6'),
+  grade7: vocabularyData.filter((word: VocabularyWord) => word.grade === 'grade7'),
+  grade8: vocabularyData.filter((word: VocabularyWord) => word.grade === 'grade8'),
+  grade9: vocabularyData.filter((word: VocabularyWord) => word.grade === 'grade9')
 };
+
+// Database-powered vocabulary by grade
+export async function getVocabularyByGradeGrouped() {
+  await vocabularyService.initialize();
+  return vocabularyService.getVocabularyByGradeGrouped();
+}
 
 // 预设模板配置
 export const presetTemplates = {
@@ -1110,11 +1117,11 @@ export const presetTemplates = {
     grade: 'primary3'
   },
 
-  // 主题分类模板
+  // 主题分类模板 (Legacy - for backward compatibility)
   colors_primary: {
     name: '小学阶段颜色类单词',
     description: '小学1-6年级所有颜色相关词汇',
-    words: allVocabularyData.filter(word =>
+    words: vocabularyData.filter((word: VocabularyWord) =>
       word.category === '颜色' &&
       ['primary1', 'primary2', 'primary3', 'primary4', 'primary5', 'primary6'].includes(word.grade)
     ),
@@ -1123,7 +1130,7 @@ export const presetTemplates = {
   animals_primary: {
     name: '小学阶段动物类单词',
     description: '小学1-6年级所有动物相关词汇',
-    words: allVocabularyData.filter(word =>
+    words: vocabularyData.filter((word: VocabularyWord) =>
       word.category === '动物' &&
       ['primary1', 'primary2', 'primary3', 'primary4', 'primary5', 'primary6'].includes(word.grade)
     ),
@@ -1132,29 +1139,29 @@ export const presetTemplates = {
   family_primary: {
     name: '小学阶段家庭类单词',
     description: '小学1-6年级所有家庭相关词汇',
-    words: allVocabularyData.filter(word =>
+    words: vocabularyData.filter((word: VocabularyWord) =>
       word.category === '家庭' &&
       ['primary1', 'primary2', 'primary3', 'primary4', 'primary5', 'primary6'].includes(word.grade)
     ),
     category: '家庭'
   },
 
-  // 高频词汇模板
+  // 高频词汇模板 (Legacy - for backward compatibility)
   high_frequency_100: {
     name: '小学必背100词',
     description: '小学阶段最高频的100个核心词汇',
-    words: allVocabularyData
-      .filter(word => ['primary1', 'primary2', 'primary3', 'primary4', 'primary5', 'primary6'].includes(word.grade))
-      .sort((a, b) => b.frequency - a.frequency)
+    words: vocabularyData
+      .filter((word: VocabularyWord) => ['primary1', 'primary2', 'primary3', 'primary4', 'primary5', 'primary6'].includes(word.grade))
+      .sort((a: VocabularyWord, b: VocabularyWord) => b.frequency - a.frequency)
       .slice(0, 100),
     type: 'high_frequency'
   },
   junior_high_essential: {
     name: '初中必背核心词汇',
     description: '初中7-9年级最重要的核心词汇',
-    words: allVocabularyData
-      .filter(word => ['grade7', 'grade8', 'grade9'].includes(word.grade))
-      .sort((a, b) => b.frequency - a.frequency)
+    words: vocabularyData
+      .filter((word: VocabularyWord) => ['grade7', 'grade8', 'grade9'].includes(word.grade))
+      .sort((a: VocabularyWord, b: VocabularyWord) => b.frequency - a.frequency)
       .slice(0, 150),
     type: 'high_frequency'
   }
