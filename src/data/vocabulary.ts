@@ -675,7 +675,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '6',
+    id: '42',
     word: 'afternoon',
     phonetic: '/ˌæftərˈnuːn/',
     translation: '下午',
@@ -690,7 +690,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '7',
+    id: '43',
     word: 'night',
     phonetic: '/naɪt/',
     translation: '晚上',
@@ -705,7 +705,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '8',
+    id: '44',
     word: 'name',
     phonetic: '/neɪm/',
     translation: '名字',
@@ -720,7 +720,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '9',
+    id: '45',
     word: 'I',
     phonetic: '/aɪ/',
     translation: '我',
@@ -735,7 +735,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '10',
+    id: '46',
     word: 'you',
     phonetic: '/juː/',
     translation: '你',
@@ -750,7 +750,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 3'
   },
   {
-    id: '11',
+    id: '47',
     word: 'apple',
     phonetic: '/ˈæpəl/',
     translation: '苹果',
@@ -765,7 +765,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 4'
   },
   {
-    id: '12',
+    id: '48',
     word: 'banana',
     phonetic: '/bəˈnænə/',
     translation: '香蕉',
@@ -780,7 +780,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 4'
   },
   {
-    id: '13',
+    id: '49',
     word: 'cat',
     phonetic: '/kæt/',
     translation: '猫',
@@ -795,7 +795,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 5'
   },
   {
-    id: '14',
+    id: '50',
     word: 'dog',
     phonetic: '/dɔːɡ/',
     translation: '狗',
@@ -810,7 +810,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 5'
   },
   {
-    id: '15',
+    id: '51',
     word: 'red',
     phonetic: '/red/',
     translation: '红色',
@@ -825,7 +825,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 6'
   },
   {
-    id: '16',
+    id: '52',
     word: 'blue',
     phonetic: '/bluː/',
     translation: '蓝色',
@@ -840,7 +840,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 6'
   },
   {
-    id: '17',
+    id: '53',
     word: 'yellow',
     phonetic: '/ˈjeloʊ/',
     translation: '黄色',
@@ -855,7 +855,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 6'
   },
   {
-    id: '18',
+    id: '54',
     word: 'green',
     phonetic: '/ɡriːn/',
     translation: '绿色',
@@ -872,7 +872,7 @@ const vocabularyDataArray: VocabularyWord[] = [
 
   // Primary 2 - 小学二年级
   {
-    id: '19',
+    id: '55',
     word: 'book',
     phonetic: '/bʊk/',
     translation: '书',
@@ -887,7 +887,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '20',
+    id: '56',
     word: 'pen',
     phonetic: '/pen/',
     translation: '钢笔',
@@ -902,7 +902,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '21',
+    id: '57',
     word: 'pencil',
     phonetic: '/ˈpensəl/',
     translation: '铅笔',
@@ -917,7 +917,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '22',
+    id: '58',
     word: 'one',
     phonetic: '/wʌn/',
     translation: '一',
@@ -932,7 +932,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 2'
   },
   {
-    id: '23',
+    id: '59',
     word: 'two',
     phonetic: '/tuː/',
     translation: '二',
@@ -949,7 +949,7 @@ const vocabularyDataArray: VocabularyWord[] = [
 
   // Grade 7 - 初中七年级
   {
-    id: '24',
+    id: '60',
     word: 'family',
     phonetic: '/ˈfæməli/',
     translation: '家庭',
@@ -964,7 +964,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '25',
+    id: '61',
     word: 'school',
     phonetic: '/skuːl/',
     translation: '学校',
@@ -979,7 +979,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '26',
+    id: '62',
     word: 'teacher',
     phonetic: '/ˈtiːtʃər/',
     translation: '老师',
@@ -994,7 +994,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '27',
+    id: '63',
     word: 'student',
     phonetic: '/ˈstuːdənt/',
     translation: '学生',
@@ -1009,7 +1009,7 @@ const vocabularyDataArray: VocabularyWord[] = [
     unit: 'Unit 1'
   },
   {
-    id: '28',
+    id: '64',
     word: 'friend',
     phonetic: '/frend/',
     translation: '朋友',

@@ -19,18 +19,18 @@
     "typescript",
     "open-source"
   ],
-  "homepage": "https://github.com/yourusername/HengshuiFont-English-Generator#readme",
+  "homepage": "https://github.com/leichongxiang/HengshuiFont-English-Generator#readme",
   "bugs": {
-    "url": "https://github.com/yourusername/HengshuiFont-English-Generator/issues"
+    "url": "https://github.com/leichongxiang/HengshuiFont-English-Generator/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/HengshuiFont-English-Generator.git"
+    "url": "git+https://github.com/leichongxiang/HengshuiFont-English-Generator.git"
   },
   "license": "Apache-2.0",
   "author": {
-    "name": "English Vocabulary Generator Contributors",
-    "url": "https://github.com/yourusername/english-vocabulary-generator/graphs/contributors"
+    "name": "HengshuiFont English Generator Contributors",
+    "url": "https://github.com/leichongxiang/HengshuiFont-English-Generator/graphs/contributors"
   },
   "main": "src/app/page.tsx",
   "private": false,
@@ -68,12 +68,15 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "cross-env": "^7.0.3",
     "eslint": "^9",
     "eslint-config-next": "15.3.5",

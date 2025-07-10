@@ -111,7 +111,7 @@ export class VocabularyPDFGenerator {
     return currentY;
   }
 
-  private drawEnglishWritingGrid(startY: number, lineCount: number, guideWord?: string): number {
+  public drawEnglishWritingGrid(startY: number, lineCount: number, guideWord?: string): number {
     let currentY = startY;
     const lineHeight = 12; // Height for each writing line set
     const gridWidth = this.pageWidth - 2 * this.margin;
@@ -163,6 +163,56 @@ export class VocabularyPDFGenerator {
   getBlob(): Blob {
     return this.pdf.output('blob');
   }
+
+  getPDF(): jsPDF {
+    return this.pdf;
+  }
+
+  public drawCompactWritingGrid(startY: number, lineCount: number, guideWord?: string): number {
+    let currentY = startY;
+    const lineHeight = 8; // Smaller height for word book
+    const gridWidth = this.pageWidth - 2 * this.margin - 100; // Leave space for word info
+    const startX = this.margin + 100;
+
+    for (let i = 0; i < lineCount; i++) {
+      // Draw the four-line grid (四线三格) - compact version
+      this.pdf.setDrawColor(180, 180, 180);
+      this.pdf.setLineWidth(0.2);
+
+      // Top line
+      this.pdf.line(startX, currentY, startX + gridWidth, currentY);
+
+      // Upper middle line (dotted)
+      this.pdf.setLineDashPattern([0.5, 0.5], 0);
+      this.pdf.line(startX, currentY + 2.5, startX + gridWidth, currentY + 2.5);
+
+      // Lower middle line (dotted)
+      this.pdf.line(startX, currentY + 5.5, startX + gridWidth, currentY + 5.5);
+
+      // Bottom line
+      this.pdf.setLineDashPattern([], 0); // Reset to solid line
+      this.pdf.line(startX, currentY + 8, startX + gridWidth, currentY + 8);
+
+      // Vertical guides every 10mm
+      this.pdf.setDrawColor(220, 220, 220);
+      for (let x = startX + 10; x < startX + gridWidth; x += 10) {
+        this.pdf.line(x, currentY, x, currentY + 8);
+      }
+
+      // Add faint guide word on first line
+      if (i === 0 && guideWord) {
+        this.pdf.setTextColor(240, 240, 240);
+        this.pdf.setFont('times', 'normal');
+        this.pdf.setFontSize(8);
+        this.pdf.text(guideWord, startX + 1, currentY + 5.5);
+        this.pdf.setTextColor(0, 0, 0); // Reset to black
+      }
+
+      currentY += lineHeight + 2; // Space between line sets
+    }
+
+    return currentY;
+  }
 }
 
 export function generateVocabularyPDF(
@@ -190,7 +240,7 @@ export function generateEbbinghausSchedulePDF(
     practiceLines: 2
   });
 
-  const pdf = generator.pdf;
+  const pdf = generator.getPDF();
   const pageWidth = pdf.internal.pageSize.getWidth();
   const pageHeight = pdf.internal.pageSize.getHeight();
   const margin = 20;
@@ -277,7 +327,7 @@ export function generateEssayTemplatePDF(
   essayType: 'narrative' | 'argumentative' | 'descriptive' = 'narrative'
 ): VocabularyPDFGenerator {
   const generator = new VocabularyPDFGenerator();
-  const pdf = generator.pdf;
+  const pdf = generator.getPDF();
   const pageWidth = pdf.internal.pageSize.getWidth();
   const pageHeight = pdf.internal.pageSize.getHeight();
   const margin = 20;
@@ -357,7 +407,7 @@ export function generateWordBookPDF(
     practiceLines: 3
   });
 
-  const pdf = generator.pdf;
+  const pdf = generator.getPDF();
   const pageWidth = pdf.internal.pageSize.getWidth();
   const pageHeight = pdf.internal.pageSize.getHeight();
   const margin = 15;
@@ -501,53 +551,4 @@ export function generateWordBookPDF(
   return generator;
 }
 
-// Compact writing grid for word book
-VocabularyPDFGenerator.prototype.drawCompactWritingGrid = function(
-  startY: number,
-  lineCount: number,
-  guideWord?: string
-): number {
-  let currentY = startY;
-  const lineHeight = 8; // Smaller height for word book
-  const gridWidth = this.pageWidth - 2 * this.margin - 100; // Leave space for word info
-  const startX = this.margin + 100;
 
-  for (let i = 0; i < lineCount; i++) {
-    // Draw the four-line grid (四线三格) - compact version
-    this.pdf.setDrawColor(180, 180, 180);
-    this.pdf.setLineWidth(0.2);
-
-    // Top line
-    this.pdf.line(startX, currentY, startX + gridWidth, currentY);
-
-    // Upper middle line (dotted)
-    this.pdf.setLineDashPattern([0.5, 0.5], 0);
-    this.pdf.line(startX, currentY + 2.5, startX + gridWidth, currentY + 2.5);
-
-    // Lower middle line (dotted)
-    this.pdf.line(startX, currentY + 5.5, startX + gridWidth, currentY + 5.5);
-
-    // Bottom line
-    this.pdf.setLineDashPattern([], 0); // Reset to solid line
-    this.pdf.line(startX, currentY + 8, startX + gridWidth, currentY + 8);
-
-    // Vertical guides every 10mm
-    this.pdf.setDrawColor(220, 220, 220);
-    for (let x = startX + 10; x < startX + gridWidth; x += 10) {
-      this.pdf.line(x, currentY, x, currentY + 8);
-    }
-
-    // Add faint guide word on first line
-    if (i === 0 && guideWord) {
-      this.pdf.setTextColor(240, 240, 240);
-      this.pdf.setFont('times', 'normal');
-      this.pdf.setFontSize(8);
-      this.pdf.text(guideWord, startX + 1, currentY + 5.5);
-      this.pdf.setTextColor(0, 0, 0); // Reset to black
-    }
-
-    currentY += lineHeight + 2; // Space between line sets
-  }
-
-  return currentY;
-};
