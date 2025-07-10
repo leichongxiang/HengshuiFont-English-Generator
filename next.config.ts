@@ -25,11 +25,11 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
-  // Set base path for GitHub Pages
-  basePath: '/HengshuiFont-English-Generator',
+  // Set base path for GitHub Pages (disabled for local development)
+  // basePath: '/HengshuiFont-English-Generator',
 
-  // Asset prefix for GitHub Pages
-  assetPrefix: '/HengshuiFont-English-Generator/',
+  // Asset prefix for GitHub Pages (disabled for local development)
+  // assetPrefix: '/HengshuiFont-English-Generator/',
 
   // Trailing slash for better compatibility
   trailingSlash: true,
