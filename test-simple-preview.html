@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Preview Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-panel {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px 5px;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .preview-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .preview-content {
+            background: white;
+            width: 90%;
+            height: 90%;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .preview-header {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .preview-body {
+            flex: 1;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .preview-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        .close-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .log {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .word-selection {
+            margin: 20px 0;
+            padding: 15px;
+            background: #e3f2fd;
+            border-radius: 8px;
+        }
+        .word-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 8px;
+            margin: 10px 0;
+        }
+        .word-item {
+            padding: 6px 10px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            font-size: 14px;
+        }
+        .word-item:hover {
+            border-color: #007bff;
+        }
+        .word-item.selected {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Simple Preview Test</h1>
+    
+    <div class="test-panel">
+        <h3>Step 1: Select Test Words</h3>
+        <div class="word-selection">
+            <p>Click words to select them:</p>
+            <div class="word-grid" id="wordGrid"></div>
+            <p>Selected: <span id="selectedCount">0</span> words</p>
+        </div>
+    </div>
+
+    <div class="test-panel">
+        <h3>Step 2: Test Preview Functions</h3>
+        <button class="btn" onclick="testStandardPreview()" id="btnStandard">
+            📄 Test Standard Preview
+        </button>
+        <button class="btn" onclick="testOneWordPreview()" id="btnOneWord">
+            📝 Test One Word Preview
+        </button>
+        <button class="btn" onclick="testCompactPreview()" id="btnCompact">
+            📋 Test Compact Preview
+        </button>
+    </div>
+
+    <div class="test-panel">
+        <h3>Debug Log</h3>
+        <div id="debugLog" class="log">Ready to test...</div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div class="preview-modal" id="previewModal">
+        <div class="preview-content">
+            <div class="preview-header">
+                <div>
+                    <h3 id="previewTitle">PDF Preview</h3>
+                    <p id="previewSubtitle">Test preview</p>
+                </div>
+                <button class="close-btn" onclick="closePreview()">✕ Close</button>
+            </div>
+            <div class="preview-body">
+                <iframe class="preview-iframe" id="previewIframe"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Test data
+        const testWords = [
+            { id: '001', word: 'hello', phonetic: '/həˈloʊ/', translation: '你好' },
+            { id: '002', word: 'world', phonetic: '/wɜːrld/', translation: '世界' },
+            { id: '003', word: 'test', phonetic: '/test/', translation: '测试' },
+            { id: '004', word: 'preview', phonetic: '/ˈpriːvjuː/', translation: '预览' },
+            { id: '005', word: 'function', phonetic: '/ˈfʌŋkʃən/', translation: '功能' },
+            { id: '006', word: 'simple', phonetic: '/ˈsɪmpəl/', translation: '简单' }
+        ];
+
+        let selectedWords = [];
+
+        // Initialize
+        function init() {
+            const grid = document.getElementById('wordGrid');
+            testWords.forEach(word => {
+                const item = document.createElement('div');
+                item.className = 'word-item';
+                item.textContent = word.word;
+                item.onclick = () => toggleWord(word, item);
+                grid.appendChild(item);
+            });
+            updateButtons();
+        }
+
+        function toggleWord(word, element) {
+            const index = selectedWords.findIndex(w => w.id === word.id);
+            if (index > -1) {
+                selectedWords.splice(index, 1);
+                element.classList.remove('selected');
+            } else {
+                selectedWords.push(word);
+                element.classList.add('selected');
+            }
+            document.getElementById('selectedCount').textContent = selectedWords.length;
+            updateButtons();
+        }
+
+        function updateButtons() {
+            const disabled = selectedWords.length === 0;
+            ['btnStandard', 'btnOneWord', 'btnCompact'].forEach(id => {
+                document.getElementById(id).disabled = disabled;
+            });
+        }
+
+        function log(message) {
+            const logDiv = document.getElementById('debugLog');
+            const timestamp = new Date().toLocaleTimeString();
+            logDiv.textContent += `[${timestamp}] ${message}\n`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+            console.log(message);
+        }
+
+        function testStandardPreview() {
+            log('Testing Standard Preview...');
+            if (selectedWords.length === 0) {
+                log('ERROR: No words selected');
+                alert('Please select some words first');
+                return;
+            }
+            generatePreview('standard');
+        }
+
+        function testOneWordPreview() {
+            log('Testing One Word Per Line Preview...');
+            if (selectedWords.length === 0) {
+                log('ERROR: No words selected');
+                alert('Please select some words first');
+                return;
+            }
+            generatePreview('oneWordPerLine');
+        }
+
+        function testCompactPreview() {
+            log('Testing Compact Preview...');
+            if (selectedWords.length === 0) {
+                log('ERROR: No words selected');
+                alert('Please select some words first');
+                return;
+            }
+            generatePreview('compact');
+        }
+
+        function generatePreview(type) {
+            try {
+                log(`Generating ${type} preview with ${selectedWords.length} words...`);
+                
+                // Check if jsPDF is available
+                if (typeof window.jspdf === 'undefined') {
+                    log('ERROR: jsPDF not loaded');
+                    alert('jsPDF library not loaded');
+                    return;
+                }
+
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+
+                log('jsPDF instance created successfully');
+
+                // Generate different templates
+                if (type === 'standard') {
+                    generateStandardTemplate(doc);
+                } else if (type === 'oneWordPerLine') {
+                    generateOneWordTemplate(doc);
+                } else {
+                    generateCompactTemplate(doc);
+                }
+
+                log('PDF content generated, creating blob...');
+
+                // Create blob and URL
+                const pdfBlob = doc.output('blob');
+                const pdfUrl = URL.createObjectURL(pdfBlob);
+
+                log(`Preview URL created: ${pdfUrl.substring(0, 50)}...`);
+
+                // Show preview
+                document.getElementById('previewTitle').textContent = `${type} Preview`;
+                document.getElementById('previewSubtitle').textContent = `${selectedWords.length} words selected`;
+                document.getElementById('previewIframe').src = pdfUrl;
+                document.getElementById('previewModal').style.display = 'flex';
+
+                log('Preview modal opened successfully');
+
+            } catch (error) {
+                log(`ERROR: ${error.message}`);
+                console.error('Preview generation error:', error);
+                alert(`Preview failed: ${error.message}`);
+            }
+        }
+
+        function generateStandardTemplate(doc) {
+            doc.setFontSize(16);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Standard Template Preview', 105, 20, { align: 'center' });
+            
+            let y = 40;
+            selectedWords.slice(0, 6).forEach((word, index) => {
+                doc.setFontSize(12);
+                doc.setFont('helvetica', 'bold');
+                doc.text(word.word, 20, y);
+                
+                doc.setFontSize(10);
+                doc.setFont('helvetica', 'normal');
+                doc.text(word.phonetic, 80, y);
+                doc.text(word.translation, 130, y);
+                
+                // Practice lines
+                for (let i = 0; i < 3; i++) {
+                    const lineY = y + 10 + (i * 12);
+                    doc.line(20, lineY, 180, lineY);
+                }
+                
+                y += 45;
+            });
+        }
+
+        function generateOneWordTemplate(doc) {
+            doc.setFontSize(16);
+            doc.setFont('helvetica', 'bold');
+            doc.text('One Word Per Line Preview', 105, 20, { align: 'center' });
+            
+            let y = 40;
+            selectedWords.slice(0, 8).forEach((word, index) => {
+                doc.setFontSize(14);
+                doc.setFont('helvetica', 'bold');
+                doc.text(word.word, 20, y);
+                
+                doc.setFontSize(10);
+                doc.setFont('helvetica', 'normal');
+                doc.text(word.phonetic, 20, y + 8);
+                
+                // Four-line grid
+                const gridX = 80;
+                const gridWidth = 100;
+                
+                doc.line(gridX, y, gridX + gridWidth, y);
+                doc.line(gridX, y + 15, gridX + gridWidth, y + 15);
+                
+                y += 25;
+            });
+        }
+
+        function generateCompactTemplate(doc) {
+            doc.setFontSize(16);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Compact Template Preview', 105, 20, { align: 'center' });
+            
+            let y = 40;
+            selectedWords.slice(0, 10).forEach((word, index) => {
+                doc.setFontSize(11);
+                doc.setFont('helvetica', 'bold');
+                doc.text(word.word, 20, y);
+                
+                doc.setFontSize(8);
+                doc.setFont('helvetica', 'normal');
+                doc.text(word.phonetic, 20, y + 6);
+                
+                // Compact grid
+                const gridX = 70;
+                doc.line(gridX, y - 2, gridX + 100, y - 2);
+                doc.line(gridX, y + 8, gridX + 100, y + 8);
+                
+                y += 18;
+            });
+        }
+
+        function closePreview() {
+            document.getElementById('previewModal').style.display = 'none';
+            const iframe = document.getElementById('previewIframe');
+            if (iframe.src) {
+                URL.revokeObjectURL(iframe.src);
+                iframe.src = '';
+            }
+            log('Preview closed');
+        }
+
+        // Initialize on load
+        window.addEventListener('load', () => {
+            init();
+            log('Simple preview test initialized');
+            log('jsPDF available: ' + (typeof window.jspdf !== 'undefined'));
+        });
+    </script>
+</body>
+</html>

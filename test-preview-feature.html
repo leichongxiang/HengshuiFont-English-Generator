@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Preview Feature Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .template-section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #007bff;
+        }
+        .template-buttons {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-preview {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            flex: 1;
+        }
+        .btn-download {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+            flex: 2;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .word-selection {
+            margin: 20px 0;
+            padding: 20px;
+            background: #e3f2fd;
+            border-radius: 8px;
+        }
+        .word-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .word-item {
+            padding: 8px 12px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        .word-item:hover {
+            border-color: #007bff;
+        }
+        .word-item.selected {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        .preview-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .preview-content {
+            background: white;
+            width: 90%;
+            height: 90%;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .preview-header {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .preview-body {
+            flex: 1;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .preview-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        .close-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .status {
+            margin: 15px 0;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .status.success { background: #d4edda; color: #155724; }
+        .status.error { background: #f8d7da; color: #721c24; }
+        .status.info { background: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 PDF Preview Feature Test</h1>
+        
+        <div class="word-selection">
+            <h3>Select Words for Testing</h3>
+            <p>Click on words to select them for template generation:</p>
+            <div class="word-grid" id="wordGrid"></div>
+            <div class="status info">
+                Selected: <span id="selectedCount">0</span> words
+            </div>
+        </div>
+
+        <div class="template-section">
+            <h3>📄 Standard Template</h3>
+            <p>Traditional 4-line format with multiple practice lines</p>
+            <div class="template-buttons">
+                <button class="btn btn-preview" onclick="previewTemplate('standard')" id="previewStandard">
+                    👁️ Preview
+                </button>
+                <button class="btn btn-download" onclick="downloadTemplate('standard')" id="downloadStandard">
+                    📥 Download Standard Template
+                </button>
+            </div>
+        </div>
+
+        <div class="template-section">
+            <h3>📝 One Word Per Line Template</h3>
+            <p>Each word on one line with clear tracing letters</p>
+            <div class="template-buttons">
+                <button class="btn btn-preview" onclick="previewTemplate('oneWordPerLine')" id="previewOneWord">
+                    👁️ Preview
+                </button>
+                <button class="btn btn-download" onclick="downloadTemplate('oneWordPerLine')" id="downloadOneWord">
+                    📥 Download One Word Per Line
+                </button>
+            </div>
+        </div>
+
+        <div class="template-section">
+            <h3>📋 Compact Template</h3>
+            <p>Dense layout with small grids (fits more words)</p>
+            <div class="template-buttons">
+                <button class="btn btn-preview" onclick="previewTemplate('compact')" id="previewCompact">
+                    👁️ Preview
+                </button>
+                <button class="btn btn-download" onclick="downloadTemplate('compact')" id="downloadCompact">
+                    📥 Download Compact Template
+                </button>
+            </div>
+        </div>
+
+        <div id="status"></div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div class="preview-modal" id="previewModal">
+        <div class="preview-content">
+            <div class="preview-header">
+                <div>
+                    <h3 id="previewTitle">PDF Preview</h3>
+                    <p id="previewSubtitle">Preview of selected template</p>
+                </div>
+                <button class="close-btn" onclick="closePreview()">✕ Close</button>
+            </div>
+            <div class="preview-body">
+                <iframe class="preview-iframe" id="previewIframe"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Test vocabulary data
+        const testWords = [
+            { id: '001', word: 'hello', phonetic: '/həˈloʊ/', translation: '你好', grade: 'primary1', category: '日常用语', difficulty: 'easy', frequency: 10, partOfSpeech: 'interjection' },
+            { id: '002', word: 'school', phonetic: '/skuːl/', translation: '学校', grade: 'primary1', category: '学习用品', difficulty: 'easy', frequency: 9, partOfSpeech: 'noun' },
+            { id: '003', word: 'family', phonetic: '/ˈfæməli/', translation: '家庭', grade: 'primary1', category: '家庭成员', difficulty: 'easy', frequency: 8, partOfSpeech: 'noun' },
+            { id: '004', word: 'teacher', phonetic: '/ˈtiːtʃər/', translation: '老师', grade: 'primary1', category: '职业', difficulty: 'easy', frequency: 9, partOfSpeech: 'noun' },
+            { id: '005', word: 'student', phonetic: '/ˈstjuːdənt/', translation: '学生', grade: 'primary1', category: '职业', difficulty: 'easy', frequency: 9, partOfSpeech: 'noun' },
+            { id: '006', word: 'apple', phonetic: '/ˈæpəl/', translation: '苹果', grade: 'primary1', category: '水果', difficulty: 'easy', frequency: 8, partOfSpeech: 'noun' },
+            { id: '007', word: 'book', phonetic: '/bʊk/', translation: '书', grade: 'primary1', category: '学习用品', difficulty: 'easy', frequency: 9, partOfSpeech: 'noun' },
+            { id: '008', word: 'water', phonetic: '/ˈwɔːtər/', translation: '水', grade: 'primary1', category: '饮料', difficulty: 'easy', frequency: 10, partOfSpeech: 'noun' },
+            { id: '009', word: 'friend', phonetic: '/frend/', translation: '朋友', grade: 'primary2', category: '人际关系', difficulty: 'easy', frequency: 8, partOfSpeech: 'noun' },
+            { id: '010', word: 'happy', phonetic: '/ˈhæpi/', translation: '快乐的', grade: 'primary2', category: '情感', difficulty: 'easy', frequency: 8, partOfSpeech: 'adjective' },
+            { id: '011', word: 'beautiful', phonetic: '/ˈbjuːtɪfəl/', translation: '美丽的', grade: 'primary3', category: '形容词', difficulty: 'medium', frequency: 7, partOfSpeech: 'adjective' },
+            { id: '012', word: 'computer', phonetic: '/kəmˈpjuːtər/', translation: '电脑', grade: 'primary4', category: '科技', difficulty: 'medium', frequency: 8, partOfSpeech: 'noun' }
+        ];
+
+        let selectedWords = [];
+
+        // Initialize word grid
+        function initializeWordGrid() {
+            const grid = document.getElementById('wordGrid');
+            testWords.forEach(word => {
+                const item = document.createElement('div');
+                item.className = 'word-item';
+                item.textContent = word.word;
+                item.onclick = () => toggleWord(word, item);
+                grid.appendChild(item);
+            });
+        }
+
+        // Toggle word selection
+        function toggleWord(word, element) {
+            const index = selectedWords.findIndex(w => w.id === word.id);
+            if (index > -1) {
+                selectedWords.splice(index, 1);
+                element.classList.remove('selected');
+            } else {
+                selectedWords.push(word);
+                element.classList.add('selected');
+            }
+            updateSelectedCount();
+            updateButtonStates();
+        }
+
+        // Update selected count
+        function updateSelectedCount() {
+            document.getElementById('selectedCount').textContent = selectedWords.length;
+        }
+
+        // Update button states
+        function updateButtonStates() {
+            const disabled = selectedWords.length === 0;
+            ['previewStandard', 'downloadStandard', 'previewOneWord', 'downloadOneWord', 'previewCompact', 'downloadCompact'].forEach(id => {
+                document.getElementById(id).disabled = disabled;
+            });
+        }
+
+        // Show status message
+        function showStatus(message, type = 'info') {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = `<div class="status ${type}">${message}</div>`;
+        }
+
+        // Safe text rendering function
+        function safeRenderText(doc, text, x, y, options) {
+            try {
+                const cleanText = text
+                    .replace(/[ə]/g, 'e').replace(/[ɪ]/g, 'i').replace(/[ʊ]/g, 'u')
+                    .replace(/[ɔ]/g, 'o').replace(/[æ]/g, 'a').replace(/[ʌ]/g, 'A')
+                    .replace(/[θð]/g, 'th').replace(/[ʃ]/g, 'sh').replace(/[ʒ]/g, 'zh')
+                    .replace(/[ŋ]/g, 'ng').replace(/[ˈˌ]/g, "'")
+                    .replace(/[^\x00-\x7F]/g, '?');
+                
+                if (options) {
+                    doc.text(cleanText, x, y, options);
+                } else {
+                    doc.text(cleanText, x, y);
+                }
+            } catch (error) {
+                console.warn('Text rendering error:', error);
+                const fallbackText = text.replace(/[^\x00-\x7F]/g, '?');
+                doc.text(fallbackText, x, y, options);
+            }
+        }
+
+        // Preview template
+        function previewTemplate(type) {
+            if (selectedWords.length === 0) {
+                showStatus('Please select some words first!', 'error');
+                return;
+            }
+
+            showStatus(`Generating ${type} template preview...`, 'info');
+
+            try {
+                const { jsPDF } = window.jspdf;
+                let doc;
+
+                if (type === 'standard') {
+                    doc = generateStandardPreview();
+                } else if (type === 'oneWordPerLine') {
+                    doc = generateOneWordPerLinePreview();
+                } else {
+                    doc = generateCompactPreview();
+                }
+
+                const pdfBlob = doc.output('blob');
+                const pdfUrl = URL.createObjectURL(pdfBlob);
+                
+                document.getElementById('previewTitle').textContent = `${type.charAt(0).toUpperCase() + type.slice(1)} Template Preview`;
+                document.getElementById('previewSubtitle').textContent = `Showing ${Math.min(selectedWords.length, 8)} of ${selectedWords.length} selected words`;
+                document.getElementById('previewIframe').src = pdfUrl;
+                document.getElementById('previewModal').style.display = 'flex';
+                
+                showStatus(`✅ Preview generated successfully!`, 'success');
+            } catch (error) {
+                showStatus(`❌ Error generating preview: ${error.message}`, 'error');
+            }
+        }
+
+        // Close preview
+        function closePreview() {
+            document.getElementById('previewModal').style.display = 'none';
+            const iframe = document.getElementById('previewIframe');
+            if (iframe.src) {
+                URL.revokeObjectURL(iframe.src);
+                iframe.src = '';
+            }
+        }
+
+        // Download template
+        function downloadTemplate(type) {
+            if (selectedWords.length === 0) {
+                showStatus('Please select some words first!', 'error');
+                return;
+            }
+
+            showStatus(`Generating ${type} template for download...`, 'info');
+
+            try {
+                const { jsPDF } = window.jspdf;
+                let doc;
+
+                if (type === 'standard') {
+                    doc = generateStandardTemplate();
+                } else if (type === 'oneWordPerLine') {
+                    doc = generateOneWordPerLineTemplate();
+                } else {
+                    doc = generateCompactTemplate();
+                }
+
+                doc.save(`${type}_template_${selectedWords.length}_words.pdf`);
+                showStatus(`✅ ${type} template downloaded successfully!`, 'success');
+            } catch (error) {
+                showStatus(`❌ Error generating template: ${error.message}`, 'error');
+            }
+        }
+
+        // Generate functions (simplified versions for testing)
+        function generateStandardPreview() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            doc.setFontSize(16);
+            doc.setFont('helvetica', 'bold');
+            safeRenderText(doc, 'Standard Template Preview', 105, 20, { align: 'center' });
+            
+            let y = 40;
+            selectedWords.slice(0, 8).forEach((word, index) => {
+                doc.setFontSize(12);
+                doc.setFont('helvetica', 'bold');
+                safeRenderText(doc, word.word, 20, y);
+                
+                doc.setFontSize(10);
+                doc.setFont('helvetica', 'normal');
+                safeRenderText(doc, word.phonetic, 80, y);
+                
+                // Draw practice lines
+                for (let i = 0; i < 3; i++) {
+                    const lineY = y + 10 + (i * 15);
+                    doc.line(20, lineY, 180, lineY);
+                    doc.line(20, lineY + 5, 180, lineY + 5);
+                    doc.line(20, lineY + 10, 180, lineY + 10);
+                    doc.line(20, lineY + 15, 180, lineY + 15);
+                }
+                
+                y += 60;
+            });
+            
+            return doc;
+        }
+
+        function generateOneWordPerLinePreview() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            doc.setFontSize(16);
+            doc.setFont('helvetica', 'bold');
+            safeRenderText(doc, 'One Word Per Line Preview', 105, 20, { align: 'center' });
+            
+            let y = 40;
+            selectedWords.slice(0, 8).forEach((word, index) => {
+                doc.setFontSize(14);
+                doc.setFont('helvetica', 'bold');
+                safeRenderText(doc, word.word, 20, y);
+                
+                doc.setFontSize(10);
+                doc.setFont('helvetica', 'normal');
+                safeRenderText(doc, word.phonetic, 20, y + 8);
+                
+                // Draw four-line grid
+                const gridX = 80;
+                const gridWidth = 100;
+                const lineHeight = 15;
+                
+                doc.line(gridX, y, gridX + gridWidth, y);
+                doc.line(gridX, y + lineHeight, gridX + gridWidth, y + lineHeight);
+                
+                // Tracing letters
+                doc.setTextColor(160, 160, 160);
+                let letterX = gridX + 5;
+                for (const letter of word.word) {
+                    safeRenderText(doc, letter, letterX, y + 10);
+                    letterX += 8;
+                }
+                doc.setTextColor(0, 0, 0);
+                
+                y += 30;
+            });
+            
+            return doc;
+        }
+
+        function generateCompactPreview() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            doc.setFontSize(16);
+            doc.setFont('helvetica', 'bold');
+            safeRenderText(doc, 'Compact Template Preview', 105, 20, { align: 'center' });
+            
+            let y = 40;
+            selectedWords.slice(0, 12).forEach((word, index) => {
+                doc.setFontSize(11);
+                doc.setFont('helvetica', 'bold');
+                safeRenderText(doc, word.word, 20, y);
+                
+                doc.setFontSize(8);
+                doc.setFont('helvetica', 'normal');
+                safeRenderText(doc, word.phonetic, 20, y + 8);
+                
+                // Compact grid
+                const gridX = 70;
+                doc.line(gridX, y - 5, gridX + 100, y - 5);
+                doc.line(gridX, y + 10, gridX + 100, y + 10);
+                
+                // Tracing letters
+                doc.setTextColor(180, 180, 180);
+                let letterX = gridX + 3;
+                for (const letter of word.word) {
+                    safeRenderText(doc, letter, letterX, y + 3);
+                    letterX += 6;
+                }
+                doc.setTextColor(0, 0, 0);
+                
+                y += 20;
+            });
+            
+            return doc;
+        }
+
+        // Generate full templates (same as preview but with all words)
+        function generateStandardTemplate() {
+            // Similar to preview but process all selectedWords
+            return generateStandardPreview(); // Simplified for demo
+        }
+
+        function generateOneWordPerLineTemplate() {
+            return generateOneWordPerLinePreview(); // Simplified for demo
+        }
+
+        function generateCompactTemplate() {
+            return generateCompactPreview(); // Simplified for demo
+        }
+
+        // Initialize on page load
+        window.addEventListener('load', () => {
+            initializeWordGrid();
+            updateButtonStates();
+            showStatus('🚀 PDF Preview Feature Test loaded. Select words and try the preview buttons!', 'info');
+        });
+    </script>
+</body>
+</html>

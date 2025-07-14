@@ -16,6 +16,7 @@
 
 // Note: fs and path are only available in Node.js environment
 // For client-side usage, we'll use alternative approaches
+// Dynamic imports will be used to avoid bundling these modules
 import {
   Database,
   VocabularyWord,
@@ -49,6 +50,19 @@ export class DatabaseManager {
    */
   async initialize(): Promise<void> {
     try {
+      // Check if we're in a browser environment
+      if (typeof window !== 'undefined') {
+        // Client-side initialization
+        await this.loadDatabase();
+        this.isInitialized = true;
+        console.log('Database initialized (client-side)');
+        return;
+      }
+
+      // Server-side initialization
+      const fs = await import('fs');
+      const path = await import('path');
+
       // Ensure directory exists
       const dbDir = path.dirname(this.dbPath);
       if (!fs.existsSync(dbDir)) {
@@ -66,7 +80,15 @@ export class DatabaseManager {
       console.log(`Database initialized at: ${this.dbPath}`);
     } catch (error) {
       console.error('Failed to initialize database:', error);
-      throw error;
+      // Don't throw error in client-side to avoid breaking the app
+      if (typeof window === 'undefined') {
+        throw error;
+      } else {
+        // Fallback to default database in client-side
+        this.db = this.getDefaultDatabase();
+        this.isInitialized = true;
+        console.log('Database initialized with default data (client-side fallback)');
+      }
     }
   }
 

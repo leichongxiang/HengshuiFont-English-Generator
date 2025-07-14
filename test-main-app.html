@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Main App Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-panel {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px 5px;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .log {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .instructions {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .step {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Main App Preview Test</h1>
+    
+    <div class="test-panel">
+        <h3>Testing Instructions</h3>
+        <div class="instructions">
+            <p><strong>Follow these steps to test the preview feature in the main app:</strong></p>
+            
+            <div class="step">
+                <strong>Step 1:</strong> Open the main app in a new tab
+                <br>
+                <button class="btn" onclick="openMainApp()">Open Main App (localhost:3000)</button>
+            </div>
+            
+            <div class="step">
+                <strong>Step 2:</strong> Open browser developer tools (F12) and go to Console tab
+            </div>
+            
+            <div class="step">
+                <strong>Step 3:</strong> In the main app, select some words from the vocabulary list on the left
+                <br>
+                <em>Click on words to select them - they should turn blue when selected</em>
+            </div>
+            
+            <div class="step">
+                <strong>Step 4:</strong> Click any Preview button in the Custom Templates section
+                <br>
+                <em>Look for the purple, blue, or green Preview buttons</em>
+            </div>
+            
+            <div class="step">
+                <strong>Step 5:</strong> Check the browser console for debug messages:
+                <ul>
+                    <li>"Preview button clicked: [type] Selected words: [count]"</li>
+                    <li>"Starting simple preview test..."</li>
+                    <li>"Test PDF created: [url]"</li>
+                    <li>"Preview modal should now be visible, showPreview: true"</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <strong>Step 6:</strong> If successful, a modal should appear with a PDF preview
+                <br>
+                <em>If not, check console for error messages</em>
+            </div>
+        </div>
+    </div>
+
+    <div class="test-panel">
+        <h3>Troubleshooting</h3>
+        <div class="log">
+Common issues and solutions:
+
+1. "请先选择要练习的单词" alert
+   → You need to select words first. Click on words in the left panel.
+
+2. No console messages when clicking Preview
+   → Check if the button click is working. Try clicking directly on the button text.
+
+3. "Cannot find name 'jsPDF'" error
+   → jsPDF import issue. This should be fixed with the dynamic import.
+
+4. Modal doesn't appear despite success messages
+   → CSS or React state issue. Check if showPreview state is being set.
+
+5. PDF doesn't load in iframe
+   → Blob URL issue. Check if the URL is valid in console.
+
+6. "Preview generation error" alert
+   → Check the full error message in console for details.
+        </div>
+    </div>
+
+    <div class="test-panel">
+        <h3>Debug Commands</h3>
+        <p>Copy and paste these commands in the main app's browser console:</p>
+        <div class="log">
+// Check React state (if you have React DevTools)
+// Look for showPreview, previewPdfUrl, previewTitle
+
+// Check if preview functions are available
+console.log('Preview functions:', {
+  generateHengshuiPDFForPreview: typeof generateHengshuiPDFForPreview,
+  generateOneWordPerLineForPreview: typeof generateOneWordPerLineForPreview,
+  generateCompactTemplateForPreview: typeof generateCompactTemplateForPreview
+});
+
+// Check if jsPDF can be imported
+import('jspdf').then(jsPDF => {
+  console.log('jsPDF import successful:', jsPDF);
+}).catch(err => {
+  console.error('jsPDF import failed:', err);
+});
+
+// Manually trigger preview (replace with actual selected words)
+// This won't work unless you're in the React component context
+        </div>
+    </div>
+
+    <div class="test-panel">
+        <h3>Expected Behavior</h3>
+        <div class="log">
+When working correctly:
+
+1. Select words → Words turn blue/highlighted
+2. Click Preview → Console shows debug messages
+3. PDF generation → "Test PDF created" message
+4. Modal appears → Full-screen overlay with PDF iframe
+5. PDF loads → You can see the test PDF content
+6. Close modal → Click X or Close button
+
+The test PDF should show:
+- "Preview Test" title
+- Template type
+- Number of selected words
+- List of first 5 selected words with translations
+        </div>
+    </div>
+
+    <div class="test-panel">
+        <h3>Test Log</h3>
+        <button class="btn" onclick="clearLog()">Clear Log</button>
+        <div id="testLog" class="log">Test log will appear here...</div>
+    </div>
+
+    <script>
+        function log(message) {
+            const logDiv = document.getElementById('testLog');
+            const timestamp = new Date().toLocaleTimeString();
+            logDiv.textContent += `[${timestamp}] ${message}\n`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function clearLog() {
+            document.getElementById('testLog').textContent = '';
+        }
+
+        function openMainApp() {
+            log('Opening main app in new tab...');
+            window.open('http://localhost:3000', '_blank');
+            log('Main app should open in new tab. Follow the testing steps there.');
+        }
+
+        // Initialize
+        window.addEventListener('load', () => {
+            log('Preview test helper loaded');
+            log('Ready to test main app preview feature');
+        });
+    </script>
+</body>
+</html>

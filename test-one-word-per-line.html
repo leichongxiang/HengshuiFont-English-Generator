@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Word Per Line Template Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        .preview {
+            margin: 20px 0;
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 6px;
+            font-family: monospace;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 One Word Per Line Template Test</h1>
+        
+        <div class="test-section">
+            <h3>Template Features</h3>
+            <ul>
+                <li>✅ Each word on a separate line</li>
+                <li>✅ Clear tracing letters in gray</li>
+                <li>✅ Standard 4-line grid system</li>
+                <li>✅ Word information (phonetics, translation)</li>
+                <li>✅ Proper spacing for practice</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h3>Test Sample Words</h3>
+            <div class="preview">
+1. hello /he'lou/ [你好]
+2. school /sku:l/ [学校]  
+3. family /'fameli/ [家庭]
+4. teacher /'ti:tSer/ [老师]
+5. student /'stju:dent/ [学生]
+            </div>
+            <button onclick="generateTestPDF()">Generate Test PDF</button>
+            <button onclick="generateLongTestPDF()">Generate Long Test (20 words)</button>
+        </div>
+
+        <div id="status"></div>
+    </div>
+
+    <script>
+        // Test vocabulary data
+        const testWords = [
+            { id: '001', word: 'hello', phonetic: '/həˈloʊ/', translation: '你好', grade: 'primary1', category: '日常用语', difficulty: 'easy', frequency: 10, partOfSpeech: 'interjection' },
+            { id: '002', word: 'school', phonetic: '/skuːl/', translation: '学校', grade: 'primary1', category: '学习用品', difficulty: 'easy', frequency: 9, partOfSpeech: 'noun' },
+            { id: '003', word: 'family', phonetic: '/ˈfæməli/', translation: '家庭', grade: 'primary1', category: '家庭成员', difficulty: 'easy', frequency: 8, partOfSpeech: 'noun' },
+            { id: '004', word: 'teacher', phonetic: '/ˈtiːtʃər/', translation: '老师', grade: 'primary1', category: '职业', difficulty: 'easy', frequency: 9, partOfSpeech: 'noun' },
+            { id: '005', word: 'student', phonetic: '/ˈstjuːdənt/', translation: '学生', grade: 'primary1', category: '职业', difficulty: 'easy', frequency: 9, partOfSpeech: 'noun' }
+        ];
+
+        const longTestWords = [
+            ...testWords,
+            { id: '006', word: 'apple', phonetic: '/ˈæpəl/', translation: '苹果', grade: 'primary1', category: '水果', difficulty: 'easy', frequency: 8, partOfSpeech: 'noun' },
+            { id: '007', word: 'book', phonetic: '/bʊk/', translation: '书', grade: 'primary1', category: '学习用品', difficulty: 'easy', frequency: 9, partOfSpeech: 'noun' },
+            { id: '008', word: 'water', phonetic: '/ˈwɔːtər/', translation: '水', grade: 'primary1', category: '饮料', difficulty: 'easy', frequency: 10, partOfSpeech: 'noun' },
+            { id: '009', word: 'friend', phonetic: '/frend/', translation: '朋友', grade: 'primary2', category: '人际关系', difficulty: 'easy', frequency: 8, partOfSpeech: 'noun' },
+            { id: '010', word: 'happy', phonetic: '/ˈhæpi/', translation: '快乐的', grade: 'primary2', category: '情感', difficulty: 'easy', frequency: 8, partOfSpeech: 'adjective' },
+            { id: '011', word: 'beautiful', phonetic: '/ˈbjuːtɪfəl/', translation: '美丽的', grade: 'primary3', category: '形容词', difficulty: 'medium', frequency: 7, partOfSpeech: 'adjective' },
+            { id: '012', word: 'computer', phonetic: '/kəmˈpjuːtər/', translation: '电脑', grade: 'primary4', category: '科技', difficulty: 'medium', frequency: 8, partOfSpeech: 'noun' },
+            { id: '013', word: 'important', phonetic: '/ɪmˈpɔːrtənt/', translation: '重要的', grade: 'grade7', category: '形容词', difficulty: 'medium', frequency: 7, partOfSpeech: 'adjective' },
+            { id: '014', word: 'understand', phonetic: '/ˌʌndərˈstænd/', translation: '理解', grade: 'grade7', category: '动词', difficulty: 'medium', frequency: 7, partOfSpeech: 'verb' },
+            { id: '015', word: 'knowledge', phonetic: '/ˈnɑːlɪdʒ/', translation: '知识', grade: 'grade8', category: '抽象概念', difficulty: 'hard', frequency: 6, partOfSpeech: 'noun' },
+            { id: '016', word: 'environment', phonetic: '/ɪnˈvaɪrənmənt/', translation: '环境', grade: 'grade8', category: '科学', difficulty: 'hard', frequency: 6, partOfSpeech: 'noun' },
+            { id: '017', word: 'responsibility', phonetic: '/rɪˌspɑːnsəˈbɪləti/', translation: '责任', grade: 'grade9', category: '抽象概念', difficulty: 'hard', frequency: 5, partOfSpeech: 'noun' },
+            { id: '018', word: 'communication', phonetic: '/kəˌmjuːnɪˈkeɪʃən/', translation: '交流', grade: 'grade9', category: '抽象概念', difficulty: 'hard', frequency: 5, partOfSpeech: 'noun' },
+            { id: '019', word: 'opportunity', phonetic: '/ˌɑːpərˈtuːnəti/', translation: '机会', grade: 'grade9', category: '抽象概念', difficulty: 'hard', frequency: 5, partOfSpeech: 'noun' },
+            { id: '020', word: 'achievement', phonetic: '/əˈtʃiːvmənt/', translation: '成就', grade: 'grade9', category: '抽象概念', difficulty: 'hard', frequency: 5, partOfSpeech: 'noun' }
+        ];
+
+        function showStatus(message, type = 'info') {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = `<div class="status ${type}">${message}</div>`;
+        }
+
+        function safeRenderText(doc, text, x, y, options) {
+            try {
+                const cleanText = text
+                    .replace(/[ə]/g, 'e').replace(/[ɪ]/g, 'i').replace(/[ʊ]/g, 'u')
+                    .replace(/[ɔ]/g, 'o').replace(/[æ]/g, 'a').replace(/[ʌ]/g, 'A')
+                    .replace(/[θð]/g, 'th').replace(/[ʃ]/g, 'sh').replace(/[ʒ]/g, 'zh')
+                    .replace(/[ŋ]/g, 'ng').replace(/[ˈˌ]/g, "'")
+                    .replace(/[^\x00-\x7F]/g, '?');
+                
+                if (options) {
+                    doc.text(cleanText, x, y, options);
+                } else {
+                    doc.text(cleanText, x, y);
+                }
+            } catch (error) {
+                console.warn('Text rendering error:', error);
+                const fallbackText = text.replace(/[^\x00-\x7F]/g, '?');
+                doc.text(fallbackText, x, y, options);
+            }
+        }
+
+        function generateOneWordPerLinePDF(words, title) {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF('portrait', 'mm', 'a4');
+            
+            const pageWidth = 210;
+            const pageHeight = 297;
+            const margin = 15;
+            const contentWidth = pageWidth - 2 * margin;
+            
+            let currentPage = 1;
+            let currentY = 40;
+            let wordIndex = 0;
+            
+            // Header function
+            function drawHeader(pageNum) {
+                doc.setFontSize(16);
+                doc.setFont('helvetica', 'bold');
+                safeRenderText(doc, title, pageWidth / 2, 15, { align: 'center' });
+                
+                doc.setFontSize(10);
+                doc.setFont('helvetica', 'normal');
+                safeRenderText(doc, 'Name: _______________', margin, 25);
+                safeRenderText(doc, 'Date: ___________', margin + 80, 25);
+                safeRenderText(doc, `Page ${pageNum}`, pageWidth - margin - 20, 25);
+            }
+            
+            // Word practice line function
+            function drawWordPracticeLine(word, x, y) {
+                const infoWidth = 55;
+                const gridWidth = contentWidth - infoWidth - 5;
+                const lineHeight = 15;
+                
+                // Word info
+                doc.setFontSize(14);
+                doc.setFont('helvetica', 'bold');
+                safeRenderText(doc, word.word, x, y + 10);
+                
+                // Phonetics
+                doc.setFontSize(10);
+                doc.setFont('helvetica', 'normal');
+                safeRenderText(doc, word.phonetic, x, y + 18);
+                
+                // Grid
+                const gridX = x + infoWidth;
+                
+                // Four lines
+                doc.setLineWidth(0.4);
+                doc.setDrawColor(0, 0, 0);
+                doc.line(gridX, y, gridX + gridWidth, y);
+                doc.line(gridX, y + lineHeight, gridX + gridWidth, y + lineHeight);
+                
+                doc.setLineDashPattern([2, 1], 0);
+                doc.setDrawColor(100, 100, 100);
+                doc.line(gridX, y + lineHeight / 3, gridX + gridWidth, y + lineHeight / 3);
+                doc.line(gridX, y + 2 * lineHeight / 3, gridX + gridWidth, y + 2 * lineHeight / 3);
+                doc.setLineDashPattern([], 0);
+                
+                // Vertical lines
+                doc.setDrawColor(220, 220, 220);
+                doc.setLineWidth(0.2);
+                const letterWidth = Math.min(12, gridWidth / (word.word.length + 1));
+                for (let i = 1; i <= word.word.length; i++) {
+                    const lineX = gridX + i * letterWidth;
+                    if (lineX < gridX + gridWidth) {
+                        doc.line(lineX, y, lineX, y + lineHeight);
+                    }
+                }
+                
+                // Tracing letters
+                doc.setFontSize(13);
+                doc.setFont('helvetica', 'normal');
+                doc.setTextColor(160, 160, 160);
+                
+                let letterX = gridX + letterWidth / 2;
+                for (const letter of word.word) {
+                    if (letterX < gridX + gridWidth - 5) {
+                        safeRenderText(doc, letter, letterX, y + 10, { align: 'center' });
+                        letterX += letterWidth;
+                    }
+                }
+                
+                doc.setTextColor(0, 0, 0);
+                doc.setDrawColor(0, 0, 0);
+                
+                return y + 25;
+            }
+            
+            drawHeader(currentPage);
+            
+            // Instructions
+            doc.setFontSize(9);
+            doc.setFont('helvetica', 'normal');
+            safeRenderText(doc, 'Instructions: Trace over the gray letters, then practice writing the word in the remaining space.', margin, currentY);
+            currentY += 15;
+            
+            // Generate content
+            while (wordIndex < words.length) {
+                const word = words[wordIndex];
+                
+                if (currentY + 25 > pageHeight - 20) {
+                    doc.addPage();
+                    currentPage++;
+                    drawHeader(currentPage);
+                    currentY = 40;
+                }
+                
+                currentY = drawWordPracticeLine(word, margin, currentY);
+                wordIndex++;
+            }
+            
+            // Footer
+            const totalPages = doc.getNumberOfPages();
+            for (let i = 1; i <= totalPages; i++) {
+                doc.setPage(i);
+                doc.setFontSize(8);
+                doc.setFont('helvetica', 'normal');
+                safeRenderText(
+                    doc,
+                    `One Word Per Line Practice Template | ${words.length} words | Page ${i}/${totalPages}`,
+                    pageWidth / 2,
+                    pageHeight - 10,
+                    { align: 'center' }
+                );
+            }
+            
+            return doc;
+        }
+
+        function generateTestPDF() {
+            showStatus('Generating test PDF with 5 words...', 'info');
+            try {
+                const doc = generateOneWordPerLinePDF(testWords, 'One Word Per Line Test Template');
+                doc.save('test_one_word_per_line.pdf');
+                showStatus('✅ Test PDF generated successfully! Check your downloads.', 'success');
+            } catch (error) {
+                showStatus(`❌ Error generating PDF: ${error.message}`, 'error');
+            }
+        }
+
+        function generateLongTestPDF() {
+            showStatus('Generating long test PDF with 20 words...', 'info');
+            try {
+                const doc = generateOneWordPerLinePDF(longTestWords, 'Extended One Word Per Line Template');
+                doc.save('test_one_word_per_line_extended.pdf');
+                showStatus('✅ Extended test PDF generated successfully! Check your downloads.', 'success');
+            } catch (error) {
+                showStatus(`❌ Error generating PDF: ${error.message}`, 'error');
+            }
+        }
+
+        // Auto-test on load
+        window.addEventListener('load', () => {
+            showStatus('🚀 One Word Per Line Template Tester loaded. Click buttons to generate test PDFs.', 'info');
+        });
+    </script>
+</body>
+</html>

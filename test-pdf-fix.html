@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Generator Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <h1>PDF Generator Test</h1>
+    <button onclick="testPDFGeneration()">Test PDF Generation</button>
+    <div id="status"></div>
+
+    <script>
+        // Test data
+        const testWords = [
+            {
+                id: '0100001',
+                word: 'hello',
+                phonetic: '/həˈloʊ/',
+                translation: '你好',
+                grade: 'primary1',
+                category: '日常用语',
+                difficulty: 'easy',
+                frequency: 10,
+                partOfSpeech: 'interjection'
+            },
+            {
+                id: '0100002',
+                word: 'school',
+                phonetic: '/skuːl/',
+                translation: '学校',
+                grade: 'primary1',
+                category: '学习用品',
+                difficulty: 'easy',
+                frequency: 9,
+                partOfSpeech: 'noun'
+            },
+            {
+                id: '0100003',
+                word: 'family',
+                phonetic: '/ˈfæməli/',
+                translation: '家庭',
+                grade: 'primary1',
+                category: '家庭成员',
+                difficulty: 'easy',
+                frequency: 8,
+                partOfSpeech: 'noun'
+            }
+        ];
+
+        // Safe text rendering function
+        function safeRenderText(doc, text, x, y, options) {
+            try {
+                // Filter problematic characters, keep basic phonetic symbols
+                const cleanText = text
+                    .replace(/[^\x00-\x7F\u0250-\u02AF\u1D00-\u1D7F\u1D80-\u1DBF]/g, '?')
+                    .replace(/[""'']/g, '"')
+                    .replace(/[—–]/g, '-');
+                
+                if (options) {
+                    doc.text(cleanText, x, y, options);
+                } else {
+                    doc.text(cleanText, x, y);
+                }
+            } catch (error) {
+                console.warn('Text rendering error:', error);
+                const fallbackText = text.replace(/[^\x00-\x7F]/g, '?');
+                doc.text(fallbackText, x, y, options);
+            }
+        }
+
+        // Compact grid drawing
+        function drawCompactGrid(doc, x, y, width) {
+            const lineHeight = 10;
+            
+            // Four lines
+            doc.setLineWidth(0.2);
+            
+            // Top and bottom lines (solid)
+            doc.setDrawColor(0, 0, 0);
+            doc.line(x, y, x + width, y);
+            doc.line(x, y + lineHeight, x + width, y + lineHeight);
+            
+            // Middle two lines (dashed)
+            doc.setLineDashPattern([0.5, 0.5], 0);
+            doc.setDrawColor(150, 150, 150);
+            doc.line(x, y + lineHeight / 3, x + width, y + lineHeight / 3);
+            doc.line(x, y + 2 * lineHeight / 3, x + width, y + 2 * lineHeight / 3);
+            
+            // Reset line style
+            doc.setLineDashPattern([], 0);
+            doc.setDrawColor(0, 0, 0);
+            
+            // Vertical guides
+            doc.setDrawColor(220, 220, 220);
+            doc.setLineWidth(0.1);
+            for (let i = 6; i < width; i += 6) {
+                doc.line(x + i, y, x + i, y + lineHeight);
+            }
+        }
+
+        // Draw word line
+        function drawWordLine(doc, word, x, y) {
+            const wordDisplayWidth = 50;
+            const gridWidth = 120;
+            
+            // Word information
+            doc.setFontSize(11);
+            doc.setFont('helvetica', 'bold');
+            safeRenderText(doc, word.word, x, y + 7);
+            
+            // Simplified phonetic
+            doc.setFontSize(8);
+            doc.setFont('helvetica', 'normal');
+            const simplePhonetic = word.phonetic
+                .replace(/[ə]/g, 'e').replace(/[ɪ]/g, 'i').replace(/[ʊ]/g, 'u')
+                .replace(/[ɔ]/g, 'o').replace(/[æ]/g, 'a').replace(/[ʌ]/g, 'A')
+                .replace(/[θð]/g, 'th').replace(/[ʃ]/g, 'sh').replace(/[ʒ]/g, 'zh')
+                .replace(/[ŋ]/g, 'ng').replace(/[ˈˌ]/g, "'");
+            safeRenderText(doc, simplePhonetic, x, y + 14);
+            
+            // Draw practice grid
+            const gridX = x + wordDisplayWidth;
+            drawCompactGrid(doc, gridX, y, gridWidth);
+            
+            // Tracing letters
+            doc.setFontSize(10);
+            doc.setFont('helvetica', 'normal');
+            doc.setTextColor(200, 200, 200);
+            
+            let letterX = gridX + 2;
+            for (const letter of word.word) {
+                if (letterX + 6 <= gridX + gridWidth) {
+                    safeRenderText(doc, letter, letterX, y + 7);
+                    letterX += 6;
+                }
+            }
+            doc.setTextColor(0, 0, 0);
+            
+            return y + 18;
+        }
+
+        function testPDFGeneration() {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = 'Generating PDF...';
+            
+            try {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF('portrait', 'mm', 'a4');
+                
+                // Initialize fonts
+                doc.setFont('helvetica', 'normal');
+                
+                const pageWidth = 210;
+                const pageHeight = 297;
+                const margin = 15;
+                
+                // Header
+                doc.setFontSize(14);
+                doc.setFont('helvetica', 'bold');
+                safeRenderText(doc, 'Compact Practice Template - Test', pageWidth / 2, 15, { align: 'center' });
+                
+                // Info line
+                doc.setFontSize(9);
+                doc.setFont('helvetica', 'normal');
+                safeRenderText(doc, 'Name: _______________', margin, 25);
+                safeRenderText(doc, 'Date: ___________', margin + 80, 25);
+                
+                let currentY = 40;
+                
+                // Instructions
+                doc.setFontSize(8);
+                safeRenderText(doc, 'Practice: Trace the gray letters, then write the word 2-3 times in the grid.', margin, currentY);
+                currentY += 12;
+                
+                // Draw words
+                testWords.forEach(word => {
+                    currentY = drawWordLine(doc, word, margin, currentY);
+                });
+                
+                // Footer
+                doc.setFontSize(7);
+                safeRenderText(doc, `English Practice Template | ${testWords.length} words | Test Version`, pageWidth / 2, pageHeight - 8, { align: 'center' });
+                
+                // Save PDF
+                doc.save('test_compact_template.pdf');
+                statusDiv.innerHTML = 'PDF generated successfully! Check your downloads.';
+                statusDiv.style.color = 'green';
+                
+            } catch (error) {
+                console.error('PDF generation error:', error);
+                statusDiv.innerHTML = 'Error generating PDF: ' + error.message;
+                statusDiv.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>

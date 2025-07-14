@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+// Use system fonts as fallback to avoid Google Fonts loading issues
+const inter = {
   variable: "--font-inter",
-  subsets: ["latin"],
-});
+  className: "font-sans"
+};
 
-const jetbrainsMono = JetBrains_Mono({
+const jetbrainsMono = {
   variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-});
+  className: "font-mono"
+};
 
 export const metadata: Metadata = {
-  title: "衡水体英语练字模板生成器",
-  description: "专业的英语单词练字模板生成工具，支持衡水体四线三格格式，适用于小学和初中英语学习",
+  title: "HengshuiFont English Generator",
+  description: "Professional English vocabulary practice template generator with Hengshui-style 4-line grids for primary and junior high school students",
 };
 
 export default function RootLayout({
@@ -24,9 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
-      >
+      <body className="font-sans antialiased">
         {children}
       </body>
     </html>

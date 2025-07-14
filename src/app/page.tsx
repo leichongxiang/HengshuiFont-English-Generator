@@ -18,10 +18,11 @@
 
 import { useState, useEffect } from 'react';
 import { vocabularyData, gradeCategories, VocabularyWord, partOfSpeechCategories, textbookVersions, vocabularyByGrade, presetTemplates } from '@/data/vocabulary';
-import { Download, BookOpen, GraduationCap, Filter, Settings, FileText, Sparkles, Search, Plus, Heart, Star, Book, Grid, Target, Zap } from 'lucide-react';
+import { Download, BookOpen, GraduationCap, Filter, Settings, FileText, Sparkles, Search, Plus, Heart, Star, Book, Grid, Target, Zap, Eye } from 'lucide-react';
 import { generateVocabularyPDF, generateEbbinghausSchedulePDF, generateEssayTemplatePDF, generateWordBookPDF, PDFOptions, defaultPDFOptions } from '@/utils/pdfGenerator';
-import { generateGradeTemplate, generateCategoryTemplate, generateHighFrequencyTemplate, HengshuiGridOptions, defaultHengshuiOptions } from '@/utils/hengshuiPdfGenerator';
+import { generateGradeTemplate, generateCategoryTemplate, generateHighFrequencyTemplate, generateCompactPracticeTemplate, generateOneWordPerLineTemplate, generateHengshuiPDFForPreview, generateOneWordPerLineForPreview, generateCompactTemplateForPreview, HengshuiGridOptions, defaultHengshuiOptions } from '@/utils/hengshuiPdfGenerator';
 import { WordBook, wordBookManager } from '@/data/wordbook';
+import PreviewModal from '@/components/PreviewModal';
 
 export default function Home() {
   const [selectedWords, setSelectedWords] = useState<VocabularyWord[]>([]);
@@ -37,6 +38,9 @@ export default function Home() {
   // 年级模板相关状态
   const [selectedPresetTemplate, setSelectedPresetTemplate] = useState<string>('');
   const [hengshuiOptions, setHengshuiOptions] = useState<HengshuiGridOptions>(defaultHengshuiOptions);
+  const [showPreview, setShowPreview] = useState(false);
+  const [previewPdfUrl, setPreviewPdfUrl] = useState<string | null>(null);
+  const [previewTitle, setPreviewTitle] = useState<string>('');
 
   // PDF generation functions
   const handleDownloadVocabularyPDF = () => {
@@ -50,7 +54,8 @@ export default function Home() {
       defaultPDFOptions,
       `${selectedGrade === 'all' ? '全年级' : selectedGrade === 'grade7' ? '七年级' : selectedGrade === 'grade8' ? '八年级' : '九年级'}英语单词练字模板`
     );
-    generator.download(`vocabulary-template-${new Date().toISOString().split('T')[0]}.pdf`);
+    const dateStr = typeof window !== 'undefined' ? new Date().toISOString().split('T')[0] : 'template';
+    generator.download(`vocabulary-template-${dateStr}.pdf`);
   };
 
   const handleDownloadSchedulePDF = () => {
@@ -60,12 +65,14 @@ export default function Home() {
     }
 
     const generator = generateEbbinghausSchedulePDF(selectedWords);
-    generator.download(`ebbinghaus-schedule-${new Date().toISOString().split('T')[0]}.pdf`);
+    const dateStr = typeof window !== 'undefined' ? new Date().toISOString().split('T')[0] : 'schedule';
+    generator.download(`ebbinghaus-schedule-${dateStr}.pdf`);
   };
 
   const handleDownloadEssayPDF = () => {
     const generator = generateEssayTemplatePDF('衡水体英语作文练习');
-    generator.download(`essay-template-${new Date().toISOString().split('T')[0]}.pdf`);
+    const dateStr = typeof window !== 'undefined' ? new Date().toISOString().split('T')[0] : 'essay';
+    generator.download(`essay-template-${dateStr}.pdf`);
   };
 
   // 年级模板生成函数
@@ -98,13 +105,102 @@ export default function Home() {
     }
 
     const templateInfo = {
-      title: '自定义英语单词练字模板',
-      date: new Date().toLocaleDateString('zh-CN')
+      title: 'Custom English Word Practice Template',
+      date: typeof window !== 'undefined' ? new Date().toLocaleDateString('en-US') : 'Preview'
     };
 
     import('@/utils/hengshuiPdfGenerator').then(({ generateHengshuiPDF }) => {
       generateHengshuiPDF(selectedWords, hengshuiOptions, templateInfo);
     });
+  };
+
+  // 紧凑型模板生成
+  const handleDownloadCompactTemplate = () => {
+    if (selectedWords.length === 0) {
+      alert('请先选择要练习的单词');
+      return;
+    }
+
+    const templateInfo = {
+      title: 'Compact Practice Template',
+      date: typeof window !== 'undefined' ? new Date().toLocaleDateString('en-US') : 'Preview'
+    };
+
+    generateCompactPracticeTemplate(selectedWords, hengshuiOptions, templateInfo);
+  };
+
+  // 每行一词描红模板生成
+  const handleDownloadOneWordPerLineTemplate = () => {
+    if (selectedWords.length === 0) {
+      alert('请先选择要练习的单词');
+      return;
+    }
+
+    const templateInfo = {
+      title: 'One Word Per Line Practice Template',
+      date: typeof window !== 'undefined' ? new Date().toLocaleDateString('en-US') : 'Preview'
+    };
+
+    generateOneWordPerLineTemplate(selectedWords, hengshuiOptions, templateInfo);
+  };
+
+  // 预览功能
+  const handlePreviewTemplate = async (templateType: 'standard' | 'oneWordPerLine' | 'compact') => {
+    if (selectedWords.length === 0) {
+      alert('请先选择要练习的单词');
+      return;
+    }
+
+    try {
+      const templateInfo = {
+        title: `${templateType === 'standard' ? 'Standard' : templateType === 'oneWordPerLine' ? 'One Word Per Line' : 'Compact'} Practice Template`,
+        date: typeof window !== 'undefined' ? new Date().toLocaleDateString('en-US') : 'Preview'
+      };
+
+      let doc: any;
+
+      // 根据模板类型生成PDF
+      if (templateType === 'standard') {
+        doc = generateHengshuiPDFForPreview(selectedWords, hengshuiOptions, templateInfo);
+      } else if (templateType === 'oneWordPerLine') {
+        doc = generateOneWordPerLineForPreview(selectedWords, hengshuiOptions, templateInfo);
+      } else {
+        doc = generateCompactTemplateForPreview(selectedWords, hengshuiOptions, templateInfo);
+      }
+
+      // 生成PDF的Blob URL用于预览
+      const pdfBlob = doc.output('blob');
+      const pdfUrl = URL.createObjectURL(pdfBlob);
+
+      setPreviewPdfUrl(pdfUrl);
+      setPreviewTitle(templateInfo.title);
+      setShowPreview(true);
+    } catch (error) {
+      console.error('Preview generation error:', error);
+      alert(`预览生成失败: ${error instanceof Error ? error.message : '未知错误'}`);
+    }
+  };
+
+  // 关闭预览
+  const closePreview = () => {
+    if (previewPdfUrl) {
+      URL.revokeObjectURL(previewPdfUrl);
+    }
+    setShowPreview(false);
+    setPreviewPdfUrl(null);
+    setPreviewTitle('');
+  };
+
+  // 从预览下载PDF
+  const downloadFromPreview = () => {
+    if (previewPdfUrl) {
+      const link = document.createElement('a');
+      link.href = previewPdfUrl;
+      link.download = `${previewTitle.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   };
 
   const handleDownloadWordBookPDF = (bookId: string, sortBy: 'alphabetical' | 'grade' | 'frequency' = 'alphabetical') => {
@@ -115,7 +211,8 @@ export default function Home() {
     }
 
     const generator = generateWordBookPDF(book.words, book.name, sortBy);
-    generator.download(`wordbook-${book.name}-${new Date().toISOString().split('T')[0]}.pdf`);
+    const dateStr = typeof window !== 'undefined' ? new Date().toISOString().split('T')[0] : 'wordbook';
+    generator.download(`wordbook-${book.name}-${dateStr}.pdf`);
   };
 
   // Load word books on component mount
@@ -847,19 +944,80 @@ export default function Home() {
                   <div className="bg-white/10 rounded-xl p-6 border border-white/20">
                     <h3 className="text-xl font-bold text-white mb-4 hengshui-font flex items-center">
                       <Zap className="w-6 h-6 mr-2" />
-                      自定义模板
+                      Custom Templates
                     </h3>
                     <p className="text-white/80 mb-4">
-                      使用左侧"选择单词"功能选择词汇，然后生成自定义的衡水体练字模板
+                      Select words from the left panel, then generate custom practice templates
                     </p>
-                    <button
-                      onClick={handleDownloadCustomHengshuiTemplate}
-                      disabled={selectedWords.length === 0}
-                      className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                    >
-                      <Download className="w-5 h-5 mr-2" />
-                      生成自定义模板 ({selectedWords.length} 个单词)
-                    </button>
+                    <div className="space-y-3">
+                      {/* Standard Template */}
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => {
+                            console.log('Standard preview button clicked');
+                            handlePreviewTemplate('standard');
+                          }}
+                          disabled={selectedWords.length === 0}
+                          className="flex-1 bg-gradient-to-r from-purple-400 to-pink-500 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                        >
+                          <Eye className="w-4 h-4 mr-2" />
+                          Preview
+                        </button>
+                        <button
+                          onClick={handleDownloadCustomHengshuiTemplate}
+                          disabled={selectedWords.length === 0}
+                          className="flex-[2] bg-gradient-to-r from-purple-500 to-pink-600 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                        >
+                          <Download className="w-4 h-4 mr-2" />
+                          Standard Template ({selectedWords.length})
+                        </button>
+                      </div>
+
+                      {/* One Word Per Line Template */}
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => handlePreviewTemplate('oneWordPerLine')}
+                          disabled={selectedWords.length === 0}
+                          className="flex-1 bg-gradient-to-r from-blue-400 to-indigo-500 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                        >
+                          <Eye className="w-4 h-4 mr-2" />
+                          Preview
+                        </button>
+                        <button
+                          onClick={handleDownloadOneWordPerLineTemplate}
+                          disabled={selectedWords.length === 0}
+                          className="flex-[2] bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                        >
+                          <BookOpen className="w-4 h-4 mr-2" />
+                          One Word Per Line ({selectedWords.length})
+                        </button>
+                      </div>
+
+                      {/* Compact Template */}
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => handlePreviewTemplate('compact')}
+                          disabled={selectedWords.length === 0}
+                          className="flex-1 bg-gradient-to-r from-green-400 to-teal-500 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                        >
+                          <Eye className="w-4 h-4 mr-2" />
+                          Preview
+                        </button>
+                        <button
+                          onClick={handleDownloadCompactTemplate}
+                          disabled={selectedWords.length === 0}
+                          className="flex-[2] bg-gradient-to-r from-green-500 to-teal-600 text-white py-3 px-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                        >
+                          <Grid className="w-4 h-4 mr-2" />
+                          Compact Template ({selectedWords.length})
+                        </button>
+                      </div>
+                    </div>
+                    <div className="mt-3 text-xs text-white/60">
+                      <p>• Standard: Traditional 4-line format with multiple practice lines</p>
+                      <p>• One Word Per Line: Each word on one line with clear tracing letters</p>
+                      <p>• Compact: Dense layout with small grids (fits more words)</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1071,6 +1229,16 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* PDF预览模态框 */}
+      <PreviewModal
+        showPreview={showPreview}
+        previewPdfUrl={previewPdfUrl}
+        previewTitle={previewTitle}
+        selectedWordsCount={selectedWords.length}
+        onClose={closePreview}
+        onDownload={downloadFromPreview}
+      />
     </div>
   );
 }

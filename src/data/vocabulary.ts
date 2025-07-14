@@ -1058,22 +1058,33 @@ export const textbookVersions = {
 
 export const ebbinghausIntervals = [1, 3, 7, 15, 30]; // days
 
-// Import vocabulary service for database access
-import { vocabularyService } from '../services/vocabularyService';
-
 // Legacy export for backward compatibility
-// Note: This will be loaded from database in production
+// Note: Database-powered functions are available separately to avoid client-side import issues
 export const vocabularyData = vocabularyDataArray;
 
-// Database-powered vocabulary functions
+// Database-powered vocabulary functions (use dynamic imports to avoid bundling issues)
 export async function getVocabularyData() {
-  await vocabularyService.initialize();
-  return vocabularyService.getAllVocabulary();
+  if (typeof window !== 'undefined') {
+    // Client-side: return static data
+    return vocabularyDataArray;
+  } else {
+    // Server-side: use database service
+    const { vocabularyService } = await import('../services/vocabularyService');
+    await vocabularyService.initialize();
+    return vocabularyService.getAllVocabulary();
+  }
 }
 
 export async function getVocabularyByGradeAsync(grade: 'primary1' | 'primary2' | 'primary3' | 'primary4' | 'primary5' | 'primary6' | 'grade7' | 'grade8' | 'grade9') {
-  await vocabularyService.initialize();
-  return vocabularyService.getVocabularyByGrade(grade);
+  if (typeof window !== 'undefined') {
+    // Client-side: filter static data
+    return vocabularyDataArray.filter(word => word.grade === grade);
+  } else {
+    // Server-side: use database service
+    const { vocabularyService } = await import('../services/vocabularyService');
+    await vocabularyService.initialize();
+    return vocabularyService.getVocabularyByGrade(grade);
+  }
 }
 
 // 按年级分组的词汇数据 (Legacy - for backward compatibility)

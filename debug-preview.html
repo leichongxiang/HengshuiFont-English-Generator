@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Preview Feature</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .debug-panel {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .log {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .error {
+            background: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        .success {
+            background: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Preview Feature Debug Tool</h1>
+    
+    <div class="debug-panel">
+        <h3>Step 1: Check if main app is running</h3>
+        <button class="btn" onclick="checkMainApp()">Check Main App (localhost:3000)</button>
+        <div id="appStatus" class="log"></div>
+    </div>
+
+    <div class="debug-panel">
+        <h3>Step 2: Test browser console access</h3>
+        <button class="btn" onclick="testConsole()">Test Console Logging</button>
+        <div id="consoleTest" class="log"></div>
+    </div>
+
+    <div class="debug-panel">
+        <h3>Step 3: Instructions for testing</h3>
+        <div class="log">
+To test the preview feature:
+
+1. Open the main app at http://localhost:3000
+2. Open browser developer tools (F12)
+3. Go to Console tab
+4. Select some words from the vocabulary list
+5. Click any Preview button
+6. Check console for debug messages:
+   - "Preview button clicked: [type] Selected words: [count]"
+   - "Starting preview generation for: [type]"
+   - "PDF generated, creating blob..."
+   - "Preview URL created: [url]"
+   - "Preview modal should now be visible"
+
+If you see errors, they will help identify the issue.
+        </div>
+    </div>
+
+    <div class="debug-panel">
+        <h3>Step 4: Common issues and solutions</h3>
+        <div class="log">
+Common issues:
+
+1. "请先选择要练习的单词" - No words selected
+   Solution: Select words from the left panel first
+
+2. "generateHengshuiPDFForPreview is not defined" - Import error
+   Solution: Check if preview functions are properly exported
+
+3. "Cannot read property 'output' of undefined" - PDF generation failed
+   Solution: Check if jsPDF is properly loaded
+
+4. Modal not showing - CSS or state issue
+   Solution: Check if showPreview state is true
+
+5. PDF not loading in iframe - Blob URL issue
+   Solution: Check if pdfUrl is valid
+        </div>
+    </div>
+
+    <div class="debug-panel">
+        <h3>Step 5: Quick test commands</h3>
+        <p>Copy and paste these commands in the browser console on the main app:</p>
+        <div class="log">
+// Check if preview functions exist
+console.log('Preview functions available:', {
+  generateHengshuiPDFForPreview: typeof generateHengshuiPDFForPreview,
+  generateOneWordPerLineForPreview: typeof generateOneWordPerLineForPreview,
+  generateCompactTemplateForPreview: typeof generateCompactTemplateForPreview
+});
+
+// Check if jsPDF is loaded
+console.log('jsPDF available:', typeof window.jspdf);
+
+// Check React state (if accessible)
+console.log('Current page state - check React DevTools');
+        </div>
+    </div>
+
+    <script>
+        function checkMainApp() {
+            const statusDiv = document.getElementById('appStatus');
+            statusDiv.textContent = 'Checking main app...';
+            
+            fetch('http://localhost:3000')
+                .then(response => {
+                    if (response.ok) {
+                        statusDiv.textContent = '✅ Main app is running at http://localhost:3000';
+                        statusDiv.className = 'log success';
+                    } else {
+                        statusDiv.textContent = `❌ Main app responded with status: ${response.status}`;
+                        statusDiv.className = 'log error';
+                    }
+                })
+                .catch(error => {
+                    statusDiv.textContent = `❌ Cannot connect to main app: ${error.message}`;
+                    statusDiv.className = 'log error';
+                });
+        }
+
+        function testConsole() {
+            const testDiv = document.getElementById('consoleTest');
+            try {
+                console.log('Debug tool test message');
+                console.error('Debug tool test error');
+                console.warn('Debug tool test warning');
+                
+                testDiv.textContent = '✅ Console logging works. Check browser console for test messages.';
+                testDiv.className = 'log success';
+            } catch (error) {
+                testDiv.textContent = `❌ Console test failed: ${error.message}`;
+                testDiv.className = 'log error';
+            }
+        }
+
+        // Auto-check main app on load
+        window.addEventListener('load', () => {
+            setTimeout(checkMainApp, 1000);
+        });
+    </script>
+</body>
+</html>
